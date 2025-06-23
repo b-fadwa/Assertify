@@ -1,0 +1,59 @@
+{
+  "applicationName": "Assetify",
+  "version": "1.1.0",
+  "description": "An all-in-one platform for tracking IT assets, managing software and licenses, and handling incidents effortlessly.",
+  "details": "Assetify streamlines IT asset management by providing a centralized system for tracking hardware, software, licenses, and incidents. With an integrated calendar and proactive alerts, it helps organizations stay organized, ensure compliance, and prevent disruptions. Designed for IT teams and administrators, Assetify enhances efficiency and reduces operational risks.",
+  "visuals": [
+    {
+      "description": "Dashboard",
+      "image": "/$shared/assets/images/dash.png",
+      "path": "/$shared/assets/images/dash.png"
+    },
+    {
+      "description": "Equipment inventory",
+      "image": "/$shared/assets/images/equipments.png",
+      "path": "/$shared/assets/images/equipments.png"
+    },
+    {
+      "description": "Software list",
+      "image": "/$shared/assets/images/softwares.png",
+      "path": "/$shared/assets/images/softwares.png"
+    },
+    {
+      "description": "License Management",
+      "image": "/$shared/assets/images/licenses.png",
+      "path": "/$shared/assets/images/licenses.png"
+    },
+    {
+      "description": "Incident Tickets",
+      "image": "/$shared/assets/images/incidents.png",
+      "path": "/$shared/assets/images/incidents.png"
+    },
+    {
+      "description": "License Expiration Calendar",
+      "image": "/$shared/assets/images/calendar.png",
+      "path": "/$shared/assets/images/calendar.png"
+    },
+    {
+      "description": "User management page",
+      "image": "/$shared/assets/images/users.png",
+      "path": "/$shared/assets/images/users.png"
+    },
+    {
+      "description": "Settings page",
+      "image": "/$shared/assets/images/settings.png",
+      "path": "/$shared/assets/images/settings.png"
+    }
+  ],
+  "logo": {
+    "small": "logo_small_path",
+    "large": "/$shared/logos/Q-2.svg"
+  },
+  "qodlyVersion": "all",
+  "author": {
+    "name": "Qodly",
+    "url": "https://qodly.com/"
+  },
+  "category": "Qodly starters",
+  "language": "English"
+}

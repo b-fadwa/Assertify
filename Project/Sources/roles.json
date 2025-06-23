@@ -1,0 +1,16 @@
+{
+	"forceLogin": false,
+	"permissions": {
+		"allowed": []
+	},
+	"privileges": [],
+	"roles": [
+		{
+			"id": "r1yDEEfH6xvN6t9d3eFCA2",
+			"role": "Admin",
+			"privileges": [
+				"guest"
+			]
+		}
+	]
+}

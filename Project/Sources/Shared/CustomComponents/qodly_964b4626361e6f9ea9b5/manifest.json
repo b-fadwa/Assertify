@@ -1,0 +1,12 @@
+{
+  "name": "qodly_dropzone",
+  "version": "0.3.2",
+  "scope": "qodly_964b4626361e6f9ea9b5",
+  "author": {
+    "name": "Qodly Team",
+    "email": "contact@qodly.com",
+    "url": "https://qodly.com"
+  },
+  "module": "components",
+  "remoteEntryFileName": "components.js"
+}

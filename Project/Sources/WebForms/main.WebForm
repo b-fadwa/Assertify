@@ -1,0 +1,787 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": [
+			{
+				"name": "demoButton2",
+				"content": "self {\n\tcursor: pointer;\n  \tbackground-image: linear-gradient(to right, #6a36ca ,rgb(88, 99, 246));\n}\nself:hover {\n\topacity: 0.8;\n}\nself:active {\n\topacity: 1;\n}",
+				"parentId": null,
+				"id": "fJAmpdtGmbsmUUIeu-WaM"
+			}
+		]
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"airyMode": true,
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"paddingLeft": "0px",
+					"paddingRight": "0px",
+					"paddingBottom": "0px",
+					"paddingTop": "0px"
+				}
+			},
+			"displayName": "Page",
+			"custom": {},
+			"parent": "",
+			"hidden": false,
+			"nodes": [
+				"VnrX0g-SN8"
+			],
+			"linkedNodes": {}
+		},
+		"VnrX0g-SN8": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"height": "100%",
+					"backgroundColor": "#ffffffff",
+					"borderRadius": "10px",
+					"marginLeft": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px",
+					"marginTop": "0px",
+					"width": "100%"
+				},
+				"classNames": [
+					"flexGrow1"
+				],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"FDx3_ZmXSk",
+				"4bxtmmvToz"
+			],
+			"linkedNodes": {}
+		},
+		"FDx3_ZmXSk": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"gap": "10px",
+					"alignItems": "start",
+					"justifyContent": "flex-start",
+					"width": "20%",
+					"paddingTop": "0px",
+					"paddingBottom": "0px",
+					"marginTop": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px",
+					"marginLeft": "0px"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "VnrX0g-SN8",
+			"hidden": false,
+			"nodes": [
+				"3cXRPIKN7N"
+			],
+			"linkedNodes": {}
+		},
+		"3cXRPIKN7N": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"backgroundColor": "#eaefeea3",
+					"borderRadius": "10px",
+					"display": "flex",
+					"flexDirection": "column",
+					"justifyContent": "center",
+					"gap": "30px",
+					"overflow": "auto",
+					"paddingRight": "12px",
+					"paddingBottom": "12px",
+					"paddingTop": "12px",
+					"paddingLeft": "12px",
+					"marginTop": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px",
+					"marginLeft": "0px"
+				},
+				"classNames": [
+					"flexGrow1"
+				],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "FDx3_ZmXSk",
+			"hidden": false,
+			"nodes": [
+				"zbNktaSstm",
+				"MiGk0stTdy"
+			],
+			"linkedNodes": {}
+		},
+		"zbNktaSstm": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"width": "100%",
+					"paddingRight": "0px",
+					"paddingBottom": "0px",
+					"paddingTop": "0px",
+					"paddingLeft": "0px",
+					"marginLeft": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px",
+					"marginTop": "0px",
+					"justifyContent": "center",
+					"alignItems": "center",
+					"gap": "10px"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "3cXRPIKN7N",
+			"hidden": false,
+			"nodes": [
+				"4Gnofznn-f",
+				"QpDiN0f185"
+			],
+			"linkedNodes": {}
+		},
+		"4Gnofznn-f": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [
+					{
+						"type": "navigation",
+						"id": "v3oVJ7hNRsM2a9uDqCwdRz",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"isHardCoded": true,
+						"target": "home"
+					}
+				],
+				"classNames": [
+					"demoButton2"
+				],
+				"style": {
+					"borderRadius": "20px",
+					"display": "flex",
+					"color": "#ffffffff",
+					"justifyContent": "center",
+					"alignItems": "center",
+					"width": "100%",
+					"gap": "12px",
+					"height": "50px",
+					"marginTop": "0px",
+					"marginBottom": "0px"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "zbNktaSstm",
+			"hidden": false,
+			"nodes": [
+				"xPSju0nu5H",
+				"gi3eWa5RDf"
+			],
+			"linkedNodes": {}
+		},
+		"xPSju0nu5H": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-home",
+				"style": {
+					"marginBottom": "0px",
+					"marginTop": "0px",
+					"display": "block",
+					"marginLeft": "0px",
+					"marginRight": "0px",
+					"paddingLeft": "8px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "4Gnofznn-f",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"gi3eWa5RDf": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Home",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"textAlign": "center",
+					"width": "fit-content",
+					"marginTop": "0px",
+					"marginRight": "12px",
+					"marginBottom": "0px"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "4Gnofznn-f",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"QpDiN0f185": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [
+					{
+						"type": "navigation",
+						"id": "1giPjZHsJc5vRiF6j8f69c",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "startPage",
+						"isHardCoded": true
+					}
+				],
+				"classNames": [
+					"demoButton2"
+				],
+				"style": {
+					"borderRadius": "20px",
+					"display": "flex",
+					"color": "#ffffffff",
+					"justifyContent": "center",
+					"alignItems": "center",
+					"width": "100%",
+					"gap": "12px",
+					"height": "50px",
+					"marginBottom": "0px",
+					"marginTop": "0px"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "zbNktaSstm",
+			"hidden": false,
+			"nodes": [
+				"ZHfKh3BQ3D",
+				"HhSxL_sRmH"
+			],
+			"linkedNodes": {}
+		},
+		"ZHfKh3BQ3D": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-regular fa-calendar",
+				"style": {
+					"marginBottom": "0px",
+					"marginTop": "0px",
+					"display": "block",
+					"marginLeft": "0px",
+					"marginRight": "0px",
+					"paddingLeft": "8px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "QpDiN0f185",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"HhSxL_sRmH": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Go to app",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"textAlign": "center",
+					"width": "fit-content",
+					"marginTop": "0px",
+					"marginRight": "12px",
+					"marginBottom": "0px"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "QpDiN0f185",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"MiGk0stTdy": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"display": "flex",
+					"overflow": "auto",
+					"paddingRight": "0px",
+					"paddingBottom": "0px",
+					"paddingTop": "0px",
+					"paddingLeft": "0px"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "3cXRPIKN7N",
+			"hidden": false,
+			"nodes": [
+				"k3AYPLpWMN"
+			],
+			"linkedNodes": {}
+		},
+		"k3AYPLpWMN": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "- Assetify is an all-in-one platform that enables you to track IT assets, manage software and licenses, and handle incidents effortlessly, ensuring seamless IT operations.",
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- The dashboard provides an overview of your assets, incidents, and license expirations, allowing you to stay on top of important events and critical tasks."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- You can easily manage your equipment inventory, view software lists, and track license statuses all in one place. The platform provides tools for monitoring the health and availability of your IT assets."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- The license management section helps you organize and manage your software licenses, ensuring compliance and preventing any disruptions due to expired licenses."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- Incident management is also integrated, enabling you to track and resolve incidents efficiently. You can view open tickets, assign tasks, and monitor the progress of resolution."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- The license expiration calendar keeps you informed of upcoming license renewals, so you never miss a critical deadline."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "- Assetify also features a user management page where administrators can manage user roles and permissions to ensure the right access levels for each team member."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "-The settings page provides a structured interface to view and add application settings, making it essential for configuration management."
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontWeight": "500",
+					"textAlign": "justify"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "MiGk0stTdy",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"4bxtmmvToz": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"paddingLeft": "6px",
+					"paddingRight": "6px",
+					"paddingBottom": "6px",
+					"paddingTop": "6px",
+					"display": "flex",
+					"flexDirection": "column",
+					"width": "80%",
+					"borderWidth": "5px",
+					"borderColor": "#eaefeea3",
+					"borderRadius": "10px",
+					"gap": "10px",
+					"backgroundColor": "#eaefeea3",
+					"marginTop": "0px",
+					"marginLeft": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px"
+				},
+				"classNames": [
+					"flexGrow1"
+				],
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "VnrX0g-SN8",
+			"hidden": false,
+			"nodes": [
+				"DddNcyG-9Y",
+				"th8sEQe32c"
+			],
+			"linkedNodes": {}
+		},
+		"DddNcyG-9Y": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"style": {
+					"textAlign": "justify",
+					"display": "block",
+					"paddingRight": "0px",
+					"paddingBottom": "0px",
+					"paddingTop": "0px",
+					"paddingLeft": "0px"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "4bxtmmvToz",
+			"hidden": false,
+			"nodes": [
+				"1waumvPkmk"
+			],
+			"linkedNodes": {}
+		},
+		"1waumvPkmk": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Different parts covered in the app:",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "   -Use of different display components to show data."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "   -Navigation throught different pages."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "   -Use of custom components: Charts, Calendar, Tree and other components depending on the need."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "   -Proactive Email Alerts for Critical Asset Changes."
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontWeight": "500"
+				},
+				"iterableChild": true
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "DddNcyG-9Y",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"th8sEQe32c": {
+			"type": {
+				"resolvedName": "WebformLoader"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "100%",
+					"height": "600px"
+				},
+				"classNames": [
+					"flexGrow1"
+				],
+				"datasource": "",
+				"webform": "startPage"
+			},
+			"displayName": "Page Loader",
+			"custom": {},
+			"parent": "4bxtmmvToz",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		}
+	}
+}

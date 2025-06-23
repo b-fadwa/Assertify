@@ -1,0 +1,526 @@
+{
+	"demo": [
+		{
+			"id": "Search",
+			"type": "scalar",
+			"namespace": "demo",
+			"dataType": "string",
+			"initialValue": ""
+		},
+		{
+			"id": "Users",
+			"type": "entitysel",
+			"dataclass": "User",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "User",
+			"type": "entity",
+			"dataclass": "User",
+			"from": "Users",
+			"namespace": "demo",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "Incidents",
+			"type": "entitysel",
+			"dataclass": "IncidentHistory",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100,
+			"events": [
+				{
+					"type": "method",
+					"dataclass": "IncidentHistory",
+					"events": [
+						"onChange"
+					],
+					"id": "9i2R2uNF5SMLQnAK8A5bbH",
+					"method": "ds.IncidentHistory.incidentStats",
+					"params": [
+						{
+							"name": "incidentDate",
+							"type": "date",
+							"datasource": "selectedDate",
+							"id": "uCSHgkGKhzruVeEpENN4A4"
+						}
+					],
+					"datasource": "",
+					"returns": {
+						"name": "totals",
+						"type": "object",
+						"datasource": "Results"
+					}
+				}
+			]
+		},
+		{
+			"id": "Incident",
+			"type": "entity",
+			"dataclass": "IncidentHistory",
+			"from": "Incidents",
+			"namespace": "demo",
+			"initialValue": "",
+			"depth": null,
+			"events": []
+		},
+		{
+			"id": "Equipements",
+			"type": "entitysel",
+			"dataclass": "Equipment",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100,
+			"events": []
+		},
+		{
+			"id": "Licenses",
+			"type": "entitysel",
+			"dataclass": "License",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "equipment",
+			"type": "entity",
+			"dataclass": "Equipment",
+			"from": "Equipements",
+			"namespace": "demo",
+			"initialValue": "empty",
+			"depth": null,
+			"events": []
+		},
+		{
+			"id": "License",
+			"type": "entity",
+			"dataclass": "License",
+			"from": "Licenses",
+			"namespace": "demo",
+			"initialValue": "",
+			"depth": ""
+		},
+		{
+			"id": "Brand",
+			"type": "entity",
+			"dataclass": "Brand",
+			"namespace": "demo",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "Types",
+			"type": "entitysel",
+			"dataclass": "Type",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "Type",
+			"type": "entity",
+			"dataclass": "Type",
+			"from": "Types",
+			"namespace": "demo",
+			"initialValue": "first",
+			"depth": null
+		},
+		{
+			"id": "Brands",
+			"type": "entitysel",
+			"dataclass": "Brand",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100,
+			"events": []
+		},
+		{
+			"id": "Status",
+			"type": "entitysel",
+			"dataclass": "Status",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "Statut",
+			"type": "entity",
+			"dataclass": "Status",
+			"from": "Status",
+			"namespace": "demo",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "Categories",
+			"type": "entitysel",
+			"dataclass": "Category",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "Category",
+			"type": "entity",
+			"dataclass": "Category",
+			"from": "Categories",
+			"namespace": "demo",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "Notifications",
+			"type": "entitysel",
+			"dataclass": "Notification",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100,
+			"events": []
+		},
+		{
+			"id": "Notification",
+			"type": "entity",
+			"dataclass": "Notification",
+			"from": "Notifications",
+			"namespace": "demo",
+			"initialValue": "",
+			"depth": null,
+			"events": []
+		},
+		{
+			"id": "currentDate",
+			"type": "scalar",
+			"namespace": "demo",
+			"dataType": "date",
+			"initialValue": "29/05/2024"
+		},
+		{
+			"id": "Randoms",
+			"type": "entitysel",
+			"dataclass": "Random",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "Random",
+			"type": "entity",
+			"dataclass": "Random",
+			"from": "Randoms",
+			"namespace": "demo",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "EquTypes",
+			"type": "entitysel",
+			"dataclass": "Type",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "EquType",
+			"type": "entity",
+			"dataclass": "Type",
+			"from": "EquTypes",
+			"namespace": "demo",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "Softwares",
+			"type": "entitysel",
+			"dataclass": "Software",
+			"namespace": "demo",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "Software",
+			"type": "entity",
+			"dataclass": "Software",
+			"from": "Softwares",
+			"namespace": "demo",
+			"initialValue": "first",
+			"depth": null
+		}
+	],
+	"dataTable": [
+		{
+			"id": "Softwares",
+			"type": "entitysel",
+			"dataclass": "Software",
+			"namespace": "dataTable",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "search2",
+			"type": "scalar",
+			"namespace": "dataTable",
+			"dataType": "string",
+			"initialValue": ""
+		},
+		{
+			"id": "Software",
+			"type": "entity",
+			"dataclass": "Software",
+			"namespace": "dataTable",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "EquSoftwares",
+			"type": "entitysel",
+			"dataclass": "EquipmentSoftware",
+			"namespace": "dataTable",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "EquSoftware",
+			"type": "entity",
+			"dataclass": "EquipmentSoftware",
+			"from": "EquSoftwares",
+			"namespace": "dataTable",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "search",
+			"type": "scalar",
+			"namespace": "dataTable",
+			"dataType": "string",
+			"initialValue": ""
+		},
+		{
+			"id": "MaintInterventions",
+			"type": "entitysel",
+			"dataclass": "MaintenanceIntervention",
+			"namespace": "dataTable",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "MaintIntervention",
+			"type": "entity",
+			"dataclass": "MaintenanceIntervention",
+			"from": "MaintInterventions",
+			"namespace": "dataTable",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "UserEquipments",
+			"type": "entitysel",
+			"dataclass": "UserEquipment",
+			"namespace": "dataTable",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "UserEquipment",
+			"type": "entity",
+			"dataclass": "UserEquipment",
+			"from": "UserEquipments",
+			"namespace": "dataTable",
+			"initialValue": "",
+			"depth": null
+		},
+		{
+			"id": "search3",
+			"type": "scalar",
+			"namespace": "dataTable",
+			"dataType": "string",
+			"initialValue": "",
+			"events": [
+				{
+					"type": "method",
+					"dataclass": "IncidentHistory",
+					"events": [
+						"onChange"
+					],
+					"id": "nS1qwrNUjqPSdFffKXPMXk",
+					"method": "ds.IncidentHistory.searchByName",
+					"params": [
+						{
+							"name": "search",
+							"type": "string",
+							"datasource": "s",
+							"id": "3AhNwfMPEt78PhTpHT6uvJ",
+							"isHardCoded": true,
+							"hardCodedValue": "searchByName"
+						}
+					],
+					"datasource": "",
+					"returns": {
+						"name": "result",
+						"type": "cs.IncidentHistorySelection",
+						"datasource": "Inc"
+					}
+				}
+			]
+		},
+		{
+			"id": "Equipments",
+			"type": "entitysel",
+			"dataclass": "Equipment",
+			"namespace": "dataTable",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		}
+	],
+	"UI": [
+		{
+			"id": "HomePage",
+			"type": "scalar",
+			"namespace": "UI",
+			"dataType": "string",
+			"initialValue": ""
+		},
+		{
+			"id": "Page1",
+			"type": "scalar",
+			"namespace": "UI",
+			"dataType": "string",
+			"initialValue": ""
+		}
+	],
+	"Shared": [
+		{
+			"id": "currentDate",
+			"type": "scalar",
+			"namespace": "Shared",
+			"dataType": "date",
+			"initialValue": ""
+		},
+		{
+			"id": "incidents1",
+			"type": "entitysel",
+			"dataclass": "IncidentHistory",
+			"namespace": "Shared",
+			"initialValue": "",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "incident1",
+			"type": "entity",
+			"dataclass": "IncidentHistory",
+			"from": "incidents1",
+			"namespace": "Shared",
+			"initialValue": "first",
+			"depth": null
+		},
+		{
+			"id": "incidents2",
+			"type": "entitysel",
+			"dataclass": "IncidentHistory",
+			"namespace": "Shared",
+			"initialValue": "",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "incident2",
+			"type": "entity",
+			"dataclass": "IncidentHistory",
+			"from": "incidents2",
+			"namespace": "Shared",
+			"initialValue": "first",
+			"depth": null
+		},
+		{
+			"id": "SearchByName1",
+			"type": "scalar",
+			"namespace": "Shared",
+			"dataType": "string",
+			"initialValue": ""
+		},
+		{
+			"id": "SearchByName2",
+			"type": "scalar",
+			"namespace": "Shared",
+			"dataType": "string",
+			"initialValue": ""
+		},
+		{
+			"id": "incidents",
+			"type": "entitysel",
+			"dataclass": "IncidentHistory",
+			"namespace": "Shared",
+			"initialValue": "",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "incident",
+			"type": "entity",
+			"dataclass": "IncidentHistory",
+			"from": "incidents",
+			"namespace": "Shared",
+			"initialValue": "first",
+			"depth": null
+		},
+		{
+			"id": "SearchByName3",
+			"type": "scalar",
+			"namespace": "Shared",
+			"dataType": "string",
+			"initialValue": ""
+		},
+		{
+			"id": "SearchByDate",
+			"type": "scalar",
+			"namespace": "Shared",
+			"dataType": "date",
+			"initialValue": ""
+		},
+		{
+			"id": "Page1",
+			"type": "scalar",
+			"namespace": "Shared",
+			"dataType": "string",
+			"initialValue": ""
+		},
+		{
+			"id": "groups",
+			"type": "entitysel",
+			"dataclass": "Group",
+			"namespace": "Shared",
+			"initialValue": "all",
+			"depth": null,
+			"pageSize": 100
+		},
+		{
+			"id": "group",
+			"type": "entity",
+			"dataclass": "Group",
+			"from": "groups",
+			"namespace": "Shared",
+			"initialValue": "",
+			"depth": null
+		}
+	]
+}

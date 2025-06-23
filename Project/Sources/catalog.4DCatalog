@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="Assetify" uuid="4FA2095CC331EF4A9C673A7E82271EFB" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="User" uuid="81896BFDD2FA4C5E9A4D27F4BE536292" id="1">
+		<field name="ID" uuid="F4521474139141D5A4B77533DB32AD86" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="email" uuid="B931B30DF79849C0AD3301105CE2E3E1" type="10" id="2"/>
+		<field name="department" uuid="9F65226405504928A2381A08048355D9" type="10" id="3"/>
+		<field name="password" uuid="92F5D6843B104466BC2BC959A622B9EB" type="10" id="5"/>
+		<field name="role" uuid="8E6E31AEC8B7436C9FAEBB812A167062" type="10" id="6"/>
+		<field name="group_ID" uuid="9D36FE11FBEB4C49AB43BB382906D63E" type="4" id="7"/>
+		<field name="firstName" uuid="7D9640BDED9845F29BEE760E448053D0" type="10" id="8"/>
+		<field name="lastName" uuid="7274ACEF73C6454ABFB1115659D51D6E" type="10" id="9"/>
+		<field name="picture" uuid="1005A2691F3C459F9589B080E74A30A5" type="12" id="10"/>
+		<field name="moreInfo" uuid="79D92FE10B634AF4ADC776367CB2B3A0" type="21" id="11"/>
+		<field name="lastLoginDate" uuid="FA691D71BEEF4F6CA7C435A09CBEFEB8" type="8" id="12"/>
+		<field name="jobTitle" uuid="17189D61AC1B4BD6B28D02911C9A4C0D" type="10" id="13"/>
+		<field name="address" uuid="738CA5D4487E4D1BB177F549D98672B1" type="21" id="18"/>
+		<field name="awsID" uuid="2F737B8272CF4AA8AE3A5599E35A8F71" type="10" id="19"/>
+		<primary_key field_name="ID" field_uuid="F4521474139141D5A4B77533DB32AD86"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="56" green="88" blue="182" alpha="255"/>
+				<coordinates left="-173.60555227454" top="-358.9980347272" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Equipment" uuid="F71002EC7A854DBBB7E58AA80E714035" id="2">
+		<field name="ID" uuid="5DEAF5D868C347A29A9ACEC8DC931B67" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="model" uuid="0F6FCE97B7A64313910F443F40AF0614" type="10" id="2"/>
+		<field name="serialNumber" uuid="4B14D90C941A49E39431F3C7AECB9695" type="10" id="3"/>
+		<field name="purchaseDate" uuid="3EFF789AFCAF4CF9B2DB811D04E6F030" type="8" id="4"/>
+		<field name="comment" uuid="B61D788EF6214B5A97454F7E149C6179" type="10" id="9"/>
+		<field name="finalWarrantyDate" uuid="7AAD99038478446CA101C7DE6068A46C" type="8" id="10"/>
+		<field name="inventoryNumber" uuid="AB42F3C430FD4879BFC3A05BC27D75F6" type="10" id="11"/>
+		<field name="status_ID" uuid="B576613E39794813A3717930337604B8" type="4" id="12"/>
+		<field name="type_ID" uuid="6480AACC58B941BEBB079AAFB0C179AE" type="4" id="13"/>
+		<field name="brand_ID" uuid="A767A06FD7D440A09192A7AEE39A3305" type="4" id="14"/>
+		<primary_key field_name="ID" field_uuid="5DEAF5D868C347A29A9ACEC8DC931B67"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="56" green="88" blue="182" alpha="255"/>
+				<coordinates left="667.11362635196" top="-401.95089933215" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Software" uuid="C5EBDA3E1EEB4CF88685271389C8E865" id="3">
+		<field name="ID" uuid="E2B5AACEE50A425FBFAAF122EEECF09D" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="name" uuid="260108BF40CA45C398D5A653C52C1FAC" type="10" id="2"/>
+		<field name="brand_ID" uuid="2131CBBF63D5475FB7FB2765AFA0A09A" type="4" id="3"/>
+		<field name="category" uuid="E69902A108A44C958D15C8A5647172E7" type="10" id="5"/>
+		<primary_key field_name="ID" field_uuid="E2B5AACEE50A425FBFAAF122EEECF09D"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="56" green="88" blue="182" alpha="255"/>
+				<coordinates left="2199.1313419832" top="-454.82696402623" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="MaintenanceIntervention" uuid="B8B05E6BE92D415AB527BE31440A3531" id="4">
+		<field name="ID" uuid="5DD98D3BB8A5453A95CE263D4472977F" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="startInterventionDate" uuid="CF823A3E462E4D36840C17CA77B1FC49" type="8" id="2"/>
+		<field name="description" uuid="54BA58CE96E74553B2066095BD29BA1A" type="10" id="3"/>
+		<field name="cost" uuid="CB417B8B53CD4A5EAC950D7D5B3E8B2D" type="6" id="4"/>
+		<field name="equipment_ID" uuid="2E4B818EE8994E5A9CA6F171F9E3A43A" type="4" id="5"/>
+		<field name="stopInterventionDate" uuid="CAD76EDA98B04EAF8A8A88F39AA100E3" type="8" id="6"/>
+		<primary_key field_name="ID" field_uuid="5DD98D3BB8A5453A95CE263D4472977F"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="56" green="88" blue="182" alpha="255"/>
+				<coordinates left="240.65852559544" top="-402.15027539987" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="IncidentHistory" uuid="D4C989A8FF5842BA910AA275A9564C5E" id="5">
+		<field name="ID" uuid="E06364BC9993466FAB3D6DE9B27CC1E8" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="incidentDate" uuid="A7DE21CCD3334014B9D00EF16EF944AF" type="8" id="2"/>
+		<field name="description" uuid="C237C203E61E496C9225DF8A7DA89D10" type="10" id="3"/>
+		<field name="resolutionStatus" uuid="8A0E7DA75B814DB884D0A8B699B699E8" type="10" id="4"/>
+		<field name="equipment_ID" uuid="1E3B549D50AD408D9C652BC20007001B" type="4" id="5"/>
+		<field name="name" uuid="25093221876847B1BDA4732D3A08D35F" type="10" id="6"/>
+		<field name="importanceLevel" uuid="7454686868C14323A33587F5883645FE" type="10" id="7"/>
+		<field name="software_ID" uuid="810E37FC099B4217B5F714CDE4F2B423" type="4" id="8"/>
+		<field name="incidentType" uuid="CFF2C3FAB5FA4F71853E5679BC8BD21C" type="10" id="9"/>
+		<field name="incidentImage" uuid="700865F0209A4B339C2F554C02169CEF" type="12" id="10"/>
+		<field name="reporter_ID" uuid="230F4FC017D34C9081E89E33A2F58EC6" type="4" id="11"/>
+		<field name="incidentFiles" uuid="FF9ACD99AFF241E6AA3A009BBFD6590F" type="21" id="12"/>
+		<field name="bool" uuid="1B4F394DD5DE479080ECE1395F01AF9E" type="6" id="13"/>
+		<primary_key field_name="ID" field_uuid="E06364BC9993466FAB3D6DE9B27CC1E8"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="226" green="42" blue="45" alpha="255"/>
+				<coordinates left="1475.1576907577" top="-100.32944910919" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="UserEquipment" uuid="797A7E512C374B5DB8DDAA86411A85C7" id="6">
+		<field name="ID" uuid="A25E9E0BA576448D89FCBA1BA479AF16" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="user_ID" uuid="BBC6051980084119A63D8CFB5A93F91C" type="4" id="2"/>
+		<field name="equipment_ID" uuid="243A9BEE81EA48B3821E86FA5BE5CB1B" type="4" id="3"/>
+		<field name="attributionDate" uuid="5359447F0EA544E5A1CDBACC9DC28ECA" type="8" id="4"/>
+		<primary_key field_name="ID" field_uuid="A25E9E0BA576448D89FCBA1BA479AF16"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="237" green="237" blue="33" alpha="255"/>
+				<coordinates left="234.03825736884" top="-88.092437270026" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="EquipmentSoftware" uuid="CEAA23810820453C94B002153E06E1C5" id="7">
+		<field name="ID" uuid="DF8C5FF3B6EA4CF98806CAF7C0339BFC" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="equipment_ID" uuid="0AD51B6390AE42FBBA07058F092288F5" type="4" id="2"/>
+		<field name="software_ID" uuid="C8C0723D648144FF9235E6151A82DA67" type="4" id="3"/>
+		<field name="installationDate" uuid="00AF1A8C3FEA41C69238EE4E191917C4" type="8" id="4"/>
+		<primary_key field_name="ID" field_uuid="DF8C5FF3B6EA4CF98806CAF7C0339BFC"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="237" green="237" blue="33" alpha="255"/>
+				<coordinates left="2214.635253524" top="59.620820330907" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="License" uuid="7F37000CB89E4940A6C8BCEBE44BFA79" id="8">
+		<field name="ID" uuid="33254ED842E547ABAEBA971DC957FC42" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="name" uuid="2C45FBF995A946EFA6DA4DF06D530E3F" type="10" id="2"/>
+		<field name="licenseKey" uuid="EE71CEE5EF4F40F98E7939501669278E" type="10" id="3"/>
+		<field name="status" uuid="418F336BCE8848F8996849400BBC7134" type="10" id="4"/>
+		<field name="serialNumber" uuid="DA83AD72C0A54D50AD4EE3BF401F0EA0" type="10" id="5"/>
+		<field name="purchaseDate" uuid="0648ADD23D3544F2AF34F2BC6D7E9CFA" type="8" id="6"/>
+		<field name="software_ID" uuid="87746D269C14428CABBF8D9D758C33E2" type="4" id="7"/>
+		<field name="category_ID" uuid="05D258EFE0634DFC9F9982B1480414AD" type="4" id="8"/>
+		<field name="expiryDate" uuid="814C8C5700F14B99BBBAEA24DAE4B51B" type="8" id="9"/>
+		<field name="user_ID" uuid="740901BB7E7A4D90A4308BCF50D8EA34" type="4" id="10"/>
+		<primary_key field_name="ID" field_uuid="33254ED842E547ABAEBA971DC957FC42"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="56" green="88" blue="182" alpha="255"/>
+				<coordinates left="2650.0674171485" top="-111.00954908179" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Group" uuid="9939EA2139754FD09EEBBFDC46186144" id="9">
+		<field name="ID" uuid="86DE1061B40949C7974D1C6CB978420B" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="name" uuid="E3DDEAF1C6814018AA6FE64439C4B8C3" type="10" id="2"/>
+		<field name="manager_ID" uuid="3B1CEB87D8E2457FACA9A4B4EAEF4632" type="4" id="4"/>
+		<primary_key field_name="ID" field_uuid="86DE1061B40949C7974D1C6CB978420B"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="56" green="88" blue="182" alpha="255"/>
+				<coordinates left="-609.14658757456" top="74.639420770342" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Type" uuid="E0DBD68606FF4BDE9E94EA552F7C38CA" id="10">
+		<field name="ID" uuid="79A3D739E6EC415EA9E2F9F0AC5408A9" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="label" uuid="64BC2BFDF2794D73AE200E2618ABE5DC" type="10" id="2"/>
+		<primary_key field_name="ID" field_uuid="79A3D739E6EC415EA9E2F9F0AC5408A9"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="56" green="88" blue="182" alpha="255"/>
+				<coordinates left="1196.7165286109" top="-540.82026358106" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Status" uuid="DE521237713C4F0C8A398AF366C1D465" id="11">
+		<field name="ID" uuid="9777EE80F81445F4A861033DBCDCE315" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="status" uuid="5FFD2C4B0D124F67A8BC83B8B7BE2203" type="10" id="2"/>
+		<primary_key field_name="ID" field_uuid="9777EE80F81445F4A861033DBCDCE315"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="56" green="88" blue="182" alpha="255"/>
+				<coordinates left="717.87313607583" top="-662.67970440511" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Brand" uuid="96C92BE4F2C04F05B1792A33DD74F18E" id="12">
+		<field name="ID" uuid="DA9EA06F59924F78BB50C663C4BE2957" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="brandName" uuid="AE129B63B8D34FFF85B778169B3858B7" type="10" id="2"/>
+		<primary_key field_name="ID" field_uuid="DA9EA06F59924F78BB50C663C4BE2957"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="56" green="88" blue="182" alpha="255"/>
+				<coordinates left="1678.9645981205" top="-489.77199023618" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Category" uuid="AAC8035D2489435287069FFD15BCF1D3" id="13">
+		<field name="ID" uuid="4EF3934F384247C4B364BB9D9A566D5E" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="categoryName" uuid="1F86DE6519264C90BBBAB127E1DBC397" type="10" id="2"/>
+		<primary_key field_name="ID" field_uuid="4EF3934F384247C4B364BB9D9A566D5E"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="2761.1267216784" top="-367.58253034071" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Notification" uuid="7D550E3B41DD49BDA76B68FA4404417A" id="14">
+		<field name="ID" uuid="4A9B6D42FC3248E28778B1B34E3C58AC" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="type" uuid="1B9FE27F0A7244799D4DEF91260CBD8F" type="10" id="2"/>
+		<field name="content" uuid="9A515B4348274B51B37A4F88D4ABDAE1" type="10" id="3"/>
+		<field name="isRead" uuid="853EF54F3C3B4922BB6A06C6AC33F41D" type="1" id="4"/>
+		<field name="createdAt" uuid="83ACA33D7F9F462AADF84949C6559148" type="8" id="5"/>
+		<field name="creationTime" uuid="35532E87530F48E088CB9B9CF10611F0" type="9" id="6"/>
+		<field name="user_ID" uuid="B0FF616EFF704E9B9247544EEC59E526" type="4" id="7"/>
+		<primary_key field_name="ID" field_uuid="4A9B6D42FC3248E28778B1B34E3C58AC"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="-638.99996872636" top="-317.99998384509" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Random" uuid="1C5DFF47FB7E48BDBDF6A2FCC3DB01C5" id="15">
+		<field name="ID" uuid="9AFDA64BA6E24D79BBA6E917511FC01D" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="object" uuid="FB01E55250224B799AE378D22FE16D14" type="10" id="2"/>
+		<field name="description" uuid="DF660F106B244A6FB81A6826885AD90F" type="10" id="3"/>
+		<field name="dueDate" uuid="09274873060449C69C2A493073FD875E" type="8" id="4"/>
+		<primary_key field_name="ID" field_uuid="9AFDA64BA6E24D79BBA6E917511FC01D"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="24" green="220" blue="28" alpha="255"/>
+				<coordinates left="-644.00000070648" top="-754.99999821024" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<table name="Setting" uuid="C5CA95711ED2460584080CD7FF6EE15C" id="16">
+		<field name="ID" uuid="6ECDB306299E4F4A96B5ED2495061A7F" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="key" uuid="4D69BD28DD6B48028E74697536970940" type="10" id="2"/>
+		<field name="value" uuid="F325FCD3C9C84D1B82F5EE2191901EA4" type="10" id="3"/>
+		<primary_key field_name="ID" field_uuid="6ECDB306299E4F4A96B5ED2495061A7F"/>
+		<table_extra>
+			<editor_table_info fields_ordering="1" displayable_fields_count="6">
+				<color red="255" green="255" blue="255" alpha="0"/>
+				<coordinates left="-643.20011359911" top="-1001.9784405663" width="200" height="300"/>
+			</editor_table_info>
+		</table_extra>
+	</table>
+	<relation uuid="99963DF6F65044DDAF722D8EB5ABAA2C" name_Nto1="user" name_1toN="equipments" state="1">
+		<related_field kind="source">
+			<field_ref uuid="BBC6051980084119A63D8CFB5A93F91C" name="user_ID">
+				<table_ref uuid="797A7E512C374B5DB8DDAA86411A85C7" name="UserEquipment"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="F4521474139141D5A4B77533DB32AD86" name="ID">
+				<table_ref uuid="81896BFDD2FA4C5E9A4D27F4BE536292" name="User"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="8DB9EAAF86D049BF9475CFE39FD9CBB5" name_Nto1="manager" name_1toN="managerGroups" state="1">
+		<related_field kind="source">
+			<field_ref uuid="3B1CEB87D8E2457FACA9A4B4EAEF4632" name="manager_ID">
+				<table_ref uuid="9939EA2139754FD09EEBBFDC46186144" name="Group"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="F4521474139141D5A4B77533DB32AD86" name="ID">
+				<table_ref uuid="81896BFDD2FA4C5E9A4D27F4BE536292" name="User"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="7E51A4F2B1364501A2FE9389760C03D4" name_Nto1="reporter" name_1toN="incidentHistories" state="1">
+		<related_field kind="source">
+			<field_ref uuid="230F4FC017D34C9081E89E33A2F58EC6" name="reporter_ID">
+				<table_ref uuid="D4C989A8FF5842BA910AA275A9564C5E" name="IncidentHistory"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="F4521474139141D5A4B77533DB32AD86" name="ID">
+				<table_ref uuid="81896BFDD2FA4C5E9A4D27F4BE536292" name="User"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="C711DDADBD4F494289A8EE429B6D1D75" name_Nto1="user" name_1toN="notifications" state="1">
+		<related_field kind="source">
+			<field_ref uuid="B0FF616EFF704E9B9247544EEC59E526" name="user_ID">
+				<table_ref uuid="7D550E3B41DD49BDA76B68FA4404417A" name="Notification"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="F4521474139141D5A4B77533DB32AD86" name="ID">
+				<table_ref uuid="81896BFDD2FA4C5E9A4D27F4BE536292" name="User"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="BFAF421CDD6F4E00A94AFD9DB1EF6025" name_Nto1="user" name_1toN="licences" state="1">
+		<related_field kind="source">
+			<field_ref uuid="740901BB7E7A4D90A4308BCF50D8EA34" name="user_ID">
+				<table_ref uuid="7F37000CB89E4940A6C8BCEBE44BFA79" name="License"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="F4521474139141D5A4B77533DB32AD86" name="ID">
+				<table_ref uuid="81896BFDD2FA4C5E9A4D27F4BE536292" name="User"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="301BAA204CE843FF945C55FC8BA9E395" name_Nto1="equipment" name_1toN="maintenanceInterventions" state="1">
+		<related_field kind="source">
+			<field_ref uuid="2E4B818EE8994E5A9CA6F171F9E3A43A" name="equipment_ID">
+				<table_ref uuid="B8B05E6BE92D415AB527BE31440A3531" name="MaintenanceIntervention"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5DEAF5D868C347A29A9ACEC8DC931B67" name="ID">
+				<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="FAE813EBC72D409BB80362B33A0BD9D6" name_Nto1="equipment" name_1toN="incidentHistories" state="1">
+		<related_field kind="source">
+			<field_ref uuid="1E3B549D50AD408D9C652BC20007001B" name="equipment_ID">
+				<table_ref uuid="D4C989A8FF5842BA910AA275A9564C5E" name="IncidentHistory"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5DEAF5D868C347A29A9ACEC8DC931B67" name="ID">
+				<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="164B32E48E83421F8D103606A30A2B5C" name_Nto1="equipment" name_1toN="users" state="1">
+		<related_field kind="source">
+			<field_ref uuid="243A9BEE81EA48B3821E86FA5BE5CB1B" name="equipment_ID">
+				<table_ref uuid="797A7E512C374B5DB8DDAA86411A85C7" name="UserEquipment"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5DEAF5D868C347A29A9ACEC8DC931B67" name="ID">
+				<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="3A590E34938C464EB1C084E94658BFF0" name_Nto1="equipment" name_1toN="equipmentSoftwares" state="1">
+		<related_field kind="source">
+			<field_ref uuid="0AD51B6390AE42FBBA07058F092288F5" name="equipment_ID">
+				<table_ref uuid="CEAA23810820453C94B002153E06E1C5" name="EquipmentSoftware"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="5DEAF5D868C347A29A9ACEC8DC931B67" name="ID">
+				<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="BDE39BF2BFAC453494D2C43F63B5ACEC" name_Nto1="software" name_1toN="equipments" state="1">
+		<related_field kind="source">
+			<field_ref uuid="C8C0723D648144FF9235E6151A82DA67" name="software_ID">
+				<table_ref uuid="CEAA23810820453C94B002153E06E1C5" name="EquipmentSoftware"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="E2B5AACEE50A425FBFAAF122EEECF09D" name="ID">
+				<table_ref uuid="C5EBDA3E1EEB4CF88685271389C8E865" name="Software"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="9CF47127F89E47F58A30EAE4274938D4" name_Nto1="software" name_1toN="licenses" state="1">
+		<related_field kind="source">
+			<field_ref uuid="87746D269C14428CABBF8D9D758C33E2" name="software_ID">
+				<table_ref uuid="7F37000CB89E4940A6C8BCEBE44BFA79" name="License"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="E2B5AACEE50A425FBFAAF122EEECF09D" name="ID">
+				<table_ref uuid="C5EBDA3E1EEB4CF88685271389C8E865" name="Software"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="D7E82A12187148EB913F436AD258FD4D" name_Nto1="software" name_1toN="incidentHistories" state="1">
+		<related_field kind="source">
+			<field_ref uuid="810E37FC099B4217B5F714CDE4F2B423" name="software_ID">
+				<table_ref uuid="D4C989A8FF5842BA910AA275A9564C5E" name="IncidentHistory"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="E2B5AACEE50A425FBFAAF122EEECF09D" name="ID">
+				<table_ref uuid="C5EBDA3E1EEB4CF88685271389C8E865" name="Software"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="EB56A28B70A84111BE763F7FF4534A6F" name_Nto1="group" name_1toN="users" state="1">
+		<related_field kind="source">
+			<field_ref uuid="9D36FE11FBEB4C49AB43BB382906D63E" name="group_ID">
+				<table_ref uuid="81896BFDD2FA4C5E9A4D27F4BE536292" name="User"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="86DE1061B40949C7974D1C6CB978420B" name="ID">
+				<table_ref uuid="9939EA2139754FD09EEBBFDC46186144" name="Group"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="6FA7C78F533B4842AFFBAF8E392E8D54" name_Nto1="type" name_1toN="equipments" state="1">
+		<related_field kind="source">
+			<field_ref uuid="6480AACC58B941BEBB079AAFB0C179AE" name="type_ID">
+				<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="79A3D739E6EC415EA9E2F9F0AC5408A9" name="ID">
+				<table_ref uuid="E0DBD68606FF4BDE9E94EA552F7C38CA" name="Type"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="268A88F3F0E1418192872983C6E79EFD" name_Nto1="status" name_1toN="equipments" state="1">
+		<related_field kind="source">
+			<field_ref uuid="B576613E39794813A3717930337604B8" name="status_ID">
+				<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="9777EE80F81445F4A861033DBCDCE315" name="ID">
+				<table_ref uuid="DE521237713C4F0C8A398AF366C1D465" name="Status"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="5B4EA55681734D68AD9E4372E29ED8F5" name_Nto1="brand" name_1toN="softwares" state="1">
+		<related_field kind="source">
+			<field_ref uuid="2131CBBF63D5475FB7FB2765AFA0A09A" name="brand_ID">
+				<table_ref uuid="C5EBDA3E1EEB4CF88685271389C8E865" name="Software"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="DA9EA06F59924F78BB50C663C4BE2957" name="ID">
+				<table_ref uuid="96C92BE4F2C04F05B1792A33DD74F18E" name="Brand"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="8E31CF471F9F4EE7A79B7055D4E251B6" name_Nto1="brand" name_1toN="equipments" state="1">
+		<related_field kind="source">
+			<field_ref uuid="A767A06FD7D440A09192A7AEE39A3305" name="brand_ID">
+				<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="DA9EA06F59924F78BB50C663C4BE2957" name="ID">
+				<table_ref uuid="96C92BE4F2C04F05B1792A33DD74F18E" name="Brand"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<relation uuid="BE53E378D66A472BAC1098CFBE316358" name_Nto1="category" name_1toN="licenses" state="1">
+		<related_field kind="source">
+			<field_ref uuid="05D258EFE0634DFC9F9982B1480414AD" name="category_ID">
+				<table_ref uuid="7F37000CB89E4940A6C8BCEBE44BFA79" name="License"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="4EF3934F384247C4B364BB9D9A566D5E" name="ID">
+				<table_ref uuid="AAC8035D2489435287069FFD15BCF1D3" name="Category"/>
+			</field_ref>
+		</related_field>
+	</relation>
+	<index kind="regular" uuid="01E949C10266406E89BF442EE71906F2" type="1">
+		<field_ref uuid="2E4B818EE8994E5A9CA6F171F9E3A43A" name="equipment_ID">
+			<table_ref uuid="B8B05E6BE92D415AB527BE31440A3531" name="MaintenanceIntervention"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="11A16B827AD04611A9E12EEB75485602" type="1">
+		<field_ref uuid="A767A06FD7D440A09192A7AEE39A3305" name="brand_ID">
+			<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="14DE0BC5459A4B2EBDBA793A59E9BD95" type="7">
+		<field_ref uuid="4A9B6D42FC3248E28778B1B34E3C58AC" name="ID">
+			<table_ref uuid="7D550E3B41DD49BDA76B68FA4404417A" name="Notification"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="193D3DB20C454B17A95E4CB49BFEB656" type="1">
+		<field_ref uuid="2131CBBF63D5475FB7FB2765AFA0A09A" name="brand_ID">
+			<table_ref uuid="C5EBDA3E1EEB4CF88685271389C8E865" name="Software"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="20B9ADC3DF89485281215549265CEF5F" type="1">
+		<field_ref uuid="9D36FE11FBEB4C49AB43BB382906D63E" name="group_ID">
+			<table_ref uuid="81896BFDD2FA4C5E9A4D27F4BE536292" name="User"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="316036BB1199453E9C96EF45DAA22E88" type="1">
+		<field_ref uuid="87746D269C14428CABBF8D9D758C33E2" name="software_ID">
+			<table_ref uuid="7F37000CB89E4940A6C8BCEBE44BFA79" name="License"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="34CC32D4A4FA43FB88EDC584C10AA9CD" type="1">
+		<field_ref uuid="230F4FC017D34C9081E89E33A2F58EC6" name="reporter_ID">
+			<table_ref uuid="D4C989A8FF5842BA910AA275A9564C5E" name="IncidentHistory"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="35332164805843D596FFC3305E962EA5" type="7">
+		<field_ref uuid="4EF3934F384247C4B364BB9D9A566D5E" name="ID">
+			<table_ref uuid="AAC8035D2489435287069FFD15BCF1D3" name="Category"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="3ACC767AB3FB4647A8EBC37A5A6EF25B" type="7">
+		<field_ref uuid="9AFDA64BA6E24D79BBA6E917511FC01D" name="ID">
+			<table_ref uuid="1C5DFF47FB7E48BDBDF6A2FCC3DB01C5" name="Random"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="4AD67BD70882417DAAF90BD590470B94" type="7">
+		<field_ref uuid="5DD98D3BB8A5453A95CE263D4472977F" name="ID">
+			<table_ref uuid="B8B05E6BE92D415AB527BE31440A3531" name="MaintenanceIntervention"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5218F22C08CA43E4A2EF919DAB9E4C3A" type="7">
+		<field_ref uuid="E06364BC9993466FAB3D6DE9B27CC1E8" name="ID">
+			<table_ref uuid="D4C989A8FF5842BA910AA275A9564C5E" name="IncidentHistory"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="5695F729D4FB4801BD4120B2E312D6E2" type="1">
+		<field_ref uuid="B0FF616EFF704E9B9247544EEC59E526" name="user_ID">
+			<table_ref uuid="7D550E3B41DD49BDA76B68FA4404417A" name="Notification"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="5BF6029DE78F4347B63BF36A7414552A" type="7">
+		<field_ref uuid="86DE1061B40949C7974D1C6CB978420B" name="ID">
+			<table_ref uuid="9939EA2139754FD09EEBBFDC46186144" name="Group"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="5CAB1866CBB643DE905DA6150A534CB1" type="1">
+		<field_ref uuid="6480AACC58B941BEBB079AAFB0C179AE" name="type_ID">
+			<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="638E78341AA14344867A545CBF25FE93" type="7">
+		<field_ref uuid="E2B5AACEE50A425FBFAAF122EEECF09D" name="ID">
+			<table_ref uuid="C5EBDA3E1EEB4CF88685271389C8E865" name="Software"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="6BD21FA9200E428AB8945F3BA44CF640" type="1">
+		<field_ref uuid="3B1CEB87D8E2457FACA9A4B4EAEF4632" name="manager_ID">
+			<table_ref uuid="9939EA2139754FD09EEBBFDC46186144" name="Group"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="92E561F2541A4F4DB0B05FC65B8B45F2" type="7">
+		<field_ref uuid="33254ED842E547ABAEBA971DC957FC42" name="ID">
+			<table_ref uuid="7F37000CB89E4940A6C8BCEBE44BFA79" name="License"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="94A2B502ED304D029929B85EB482017E" type="7">
+		<field_ref uuid="5DEAF5D868C347A29A9ACEC8DC931B67" name="ID">
+			<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="963317A49E1444CA86146D13E9647923" type="7">
+		<field_ref uuid="F4521474139141D5A4B77533DB32AD86" name="ID">
+			<table_ref uuid="81896BFDD2FA4C5E9A4D27F4BE536292" name="User"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A263D2DF654C40C98E846A43A2967739" type="1">
+		<field_ref uuid="C8C0723D648144FF9235E6151A82DA67" name="software_ID">
+			<table_ref uuid="CEAA23810820453C94B002153E06E1C5" name="EquipmentSoftware"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="A5FF78EBFAE94990BB7817D67EE42BD3" type="1">
+		<field_ref uuid="B576613E39794813A3717930337604B8" name="status_ID">
+			<table_ref uuid="F71002EC7A854DBBB7E58AA80E714035" name="Equipment"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B2994950AE2F42E2976920455FC12E56" type="1">
+		<field_ref uuid="BBC6051980084119A63D8CFB5A93F91C" name="user_ID">
+			<table_ref uuid="797A7E512C374B5DB8DDAA86411A85C7" name="UserEquipment"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BBDC0662863B4A54B769CC15E89AE6F3" type="1">
+		<field_ref uuid="0AD51B6390AE42FBBA07058F092288F5" name="equipment_ID">
+			<table_ref uuid="CEAA23810820453C94B002153E06E1C5" name="EquipmentSoftware"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BE584D2EACAB434D84EDD18B4AD4D4B3" type="1">
+		<field_ref uuid="810E37FC099B4217B5F714CDE4F2B423" name="software_ID">
+			<table_ref uuid="D4C989A8FF5842BA910AA275A9564C5E" name="IncidentHistory"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BFFC7B2548264AEAAAEA6A2AA270C61C" type="1">
+		<field_ref uuid="243A9BEE81EA48B3821E86FA5BE5CB1B" name="equipment_ID">
+			<table_ref uuid="797A7E512C374B5DB8DDAA86411A85C7" name="UserEquipment"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="C01576A3C53E42CA83CC1B0BF7767FB6" type="7">
+		<field_ref uuid="A25E9E0BA576448D89FCBA1BA479AF16" name="ID">
+			<table_ref uuid="797A7E512C374B5DB8DDAA86411A85C7" name="UserEquipment"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="C136C648FA704774A135BC7C0E41D592" type="7">
+		<field_ref uuid="DA9EA06F59924F78BB50C663C4BE2957" name="ID">
+			<table_ref uuid="96C92BE4F2C04F05B1792A33DD74F18E" name="Brand"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="C9CA98C16AB842A78827B637BD30D774" type="7">
+		<field_ref uuid="6ECDB306299E4F4A96B5ED2495061A7F" name="ID">
+			<table_ref uuid="C5CA95711ED2460584080CD7FF6EE15C" name="Setting"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="CAF9D817F6A949DE8C378BC423BA679B" type="1">
+		<field_ref uuid="740901BB7E7A4D90A4308BCF50D8EA34" name="user_ID">
+			<table_ref uuid="7F37000CB89E4940A6C8BCEBE44BFA79" name="License"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="CD6A04B0213F44EEA6024CF311A58942" type="7">
+		<field_ref uuid="79A3D739E6EC415EA9E2F9F0AC5408A9" name="ID">
+			<table_ref uuid="E0DBD68606FF4BDE9E94EA552F7C38CA" name="Type"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D67072C38E9440DC9F92817C67C6B8B5" type="1">
+		<field_ref uuid="1E3B549D50AD408D9C652BC20007001B" name="equipment_ID">
+			<table_ref uuid="D4C989A8FF5842BA910AA275A9564C5E" name="IncidentHistory"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="E66DF98F87334BF29E1507732E87EB37" type="7">
+		<field_ref uuid="9777EE80F81445F4A861033DBCDCE315" name="ID">
+			<table_ref uuid="DE521237713C4F0C8A398AF366C1D465" name="Status"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="EE190D44DD4F4EA3AE30A95F48E91FC4" type="7">
+		<field_ref uuid="DF8C5FF3B6EA4CF98806CAF7C0339BFC" name="ID">
+			<table_ref uuid="CEAA23810820453C94B002153E06E1C5" name="EquipmentSoftware"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FD3BCF88BBA443DEADC7BCD9DEE2B686" type="1">
+		<field_ref uuid="05D258EFE0634DFC9F9982B1480414AD" name="category_ID">
+			<table_ref uuid="7F37000CB89E4940A6C8BCEBE44BFA79" name="License"/>
+		</field_ref>
+	</index>
+</base>
