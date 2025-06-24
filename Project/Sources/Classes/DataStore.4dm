@@ -1,5 +1,27 @@
 Class extends DataStoreImplementation
 
+exposed Function authentify($login : Text; $psw : Text) : Boolean
+	TRACE:C157
+	var $users : cs:C1710.UserSelection
+	var $user : cs:C1710.UserEntity
+	
+	$users:=ds:C1482.User.query("firstName = :1"; $login)
+	If ($users.length=1)
+		$user:=$users.first()
+		
+		If (Verify password hash:C1534($psw; String:C10($user.password)))
+			Session:C1714.setPrivileges(String:C10($user.role))
+			Use (Session:C1714.storage)
+				Session:C1714.storage.clientInfo:=New shared object:C1526("UUID"; $user.ID)
+			End use 
+			Web Form:C1735.setMessage("Login successfull")
+		Else 
+			throw:C1805({message: "Unknown User"})
+		End if 
+	Else 
+		throw:C1805({message: "Unknown User"})
+	End if 
+	
 exposed Function getManifestObject() : Object  //used in HomePage
 	var $manifestFile : 4D:C1709.File
 	var $manifestObject : Object
@@ -107,15 +129,12 @@ exposed Function inputSelectBox($name1 : Text; $name2 : Text)
 	ds:C1482.removeCss($name2; "visibility")
 	
 	
-exposed Function getCurrentUser() : cs:C1710.UserEntity
-	
-	var $user : Object
-	var $usersInterface : cs:C1710.Qodly.Users
-	
-	$usersInterface:=cs:C1710.Qodly.Users.new()
-	$user:=$usersInterface.getCurrentUser()
-	
-	return ds:C1482.User.getCurrentUser()
+exposed Function getCurrentUser()->$user : cs:C1710.UserEntity
+	var $success : Boolean
+	TRACE:C157
+	If (Session:C1714.storage.clientInfo#Null:C1517) && (Session:C1714.storage.clientInfo.UUID#Null:C1517)
+		$user:=ds:C1482.User.get(Session:C1714.storage.clientInfo.UUID)
+	End if 
 	
 exposed Function returnCurrentDate() : Date
 	return Date:C102(Current date:C33())
