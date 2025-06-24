@@ -35,34 +35,27 @@ Function createData()
 	
 	//$users
 Function generateUser()
-	
-	var $userClass : cs:C1710.Qodly.Users
-	
 	var $cloudUsers : Collection
-	var $oneUser : Object
-	
-	var $user : cs:C1710.UserEntity
-	
-	$userClass:=cs:C1710.Qodly.Users.me
-	$cloudUsers:=$userClass.allUsers()
-	
 	var $departments : Collection
-	$departments:=["HR"; "PS"; "QA"; "Marketing"; "Qodly Customer Service"; "Support"; "DevOps"]
-	
 	var $jobTitles : Collection
+	var $user : cs:C1710.UserEntity
+	var $item : Object
+	var $users : Collection
+	
+	$users:=[\
+		{firstName: "Emma"; lastName: "Rossi"; email: "emmarossi@4D.com"; role: "Administrator"}; \
+		{firstName: "Sofia"; lastName: "Muller"; email: "sofiamuller@4D.com"; role: "Manager"}\
+		]
+	$departments:=["HR"; "PS"; "QA"; "Marketing"; "Qodly Customer Service"; "Support"; "DevOps"]
 	$jobTitles:=["Software Engineer"; "Systems Administrator"; "Network Engineer"; "IT Support Specialist"; "Database Administrator"; "Project Manager"; "Quality Assurance Analyst"; "Business Analyst"; "Security Analyst"; "UX/UI Designer"; "Product Manager"; "Data Scientist"; "Marketing Manager"; "HR Manager"; "Financial Analyst"; "Customer Service Representative"; "Technical Writer"; "Full Stack Developer"; "DevOps Engineer"; "Application Support Analyst"]
 	
-	var $info : Object
-	var $request : 4D:C1709.HTTPRequest
-	
-	For each ($oneUser; $cloudUsers)
+	For each ($item; $users)
 		$user:=ds:C1482.User.new()
-		$user.awsID:=$oneUser.username
-		$user.firstName:=$oneUser.firstname
-		$user.lastName:=$oneUser.lastname
-		$user.email:=$oneUser.email
-		$user.role:=$oneUser.role
-		$user.password:="password"
+		$user.firstName:=$item.firstName
+		$user.lastName:=$item.lastName
+		$user.email:=$item.email
+		$user.role:=$item.role
+		$user.password:=Generate password hash:C1533("password")
 		$user.address:={first: "N150"; second: "Street K"; state: "State"; city: "Rabat"; zipCode: "10113"}
 		$user.moreInfo:={phone: "+212600000000"}
 		$user.department:=$departments.at(Random:C100%($departments.length))
@@ -77,7 +70,7 @@ Function generateGroup()
 	var $group : cs:C1710.GroupEntity
 	var $supervisor : cs:C1710.UserEntity
 	var $managers : cs:C1710.UserSelection
-	
+	TRACE:C157
 	var $users : cs:C1710.UserSelection
 	$users:=ds:C1482.User.all()
 	
