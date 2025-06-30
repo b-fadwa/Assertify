@@ -1,108 +1,110 @@
 Class constructor()
-
-
-    	var $transporter: 4D.SMTPTransporter
-        var $serverSettings: object
-        var $server: object
-
-		$serverSettings := this.getSMTPSettings()
-        $server := new Object()
-        $server.host := $serverSettings.host
-        $server.port := num($serverSettings.port)
-        $server.user := $serverSettings.user
-        $server.password := $serverSettings.password
-
-        this.transporter := 4D.SMTPTransporter.new($server)
-    
-
-    function getSetting($key : text) : text 
-        var $setting: object
-        $setting := ds.Setting.query("key = :1"; $key).first() 
-        if ($setting = null) 
-            web Form("Setting not found for key: " + $key)
-        end if
-        return $setting.value
-    
-
-    function getSMTPSettings() : object 
-        return new Object(\
-            "host"; this.getSetting("smtp.host");\
-            "user"; this.getSetting("smtp.user");\
-            "password"; this.getSetting("smtp.password");\
-            "port"; this.getSetting("smtp.port")\
-        )
-    
-
-    function getDefaultEmailSettings() : object 
-        return new Object(\
-            "from"; this.getSetting("email.from")\
-        )
-    
-
-    function createReminderEmail($user : cs.UserEntity; $incident : cs.IncidentHistoryEntity) : object 
-        var $email: object
-        var $emailSettings: object
-		var $attachment1; $copy: 4D.File
-		var $htmlBody: text		
-
-		$attachment1 := file("/SOURCES/Shared/assets/logo.png")
-		$copy := $attachment1.copyTo(folder("/PACKAGE");fk overwrite)
-
 	
-        $emailSettings := this.getDefaultEmailSettings()
-        $email := new Object()
-        $email.subject := "Report Incident : " + $incident.name
-        $email.from := $emailSettings.from
-        $email.to := $user.email
-
-		$email.attachments := new Collection(4D.MailAttachment)
-		$email.attachments[0] = 4D.MailAttachment.new($attachment1;"";"Qodly")
-
-
-		$htmlBody := "<html>" + \
-        "<body>" + \
-        "<p><strong>Incident déclaré par:</strong> " + $incident.reporter.firstName + " " + $incident.reporter.lastName + "</p>" + \
-        "<p><strong>Date de déclaration:</strong> " + String($incident.incidentDate) + "</p>" + \
-		"<p><strong>Type de l'incident:</strong> " + String($incident.incidentType) + "</p>" + \
-        "<p><strong>Détails de l'incident:</strong></p>" + \
-        "<ul>" + \
-        "<li><strong>Nom de l'incident:</strong> " + $incident.name + "</li>" + \
-        "<li><strong>Équipement concerné:</strong> " + String($incident.equipment.type.label + " " + $incident.equipment.brand.brandName) + \
-		"</li>" 
-		
-		if ($incident.incidentType = "software")
-			$htmlBody := $htmlBody + "<li><strong>Logiciel concerné:</strong> " + \
-            String($incident.software.name + " " + $incident.software.category) + \
-        "</li>"
-		end if 
-
-		$htmlBody := $htmlBody + \
-        "<li><strong>Description:</strong> " + String($incident.description) + "</li>" + \
-        "</ul>" + \
+	
+	var $transporter : 4D:C1709.SMTPTransporter
+	var $serverSettings : Object
+	var $server : Object
+	
+	$serverSettings:=This:C1470.getSMTPSettings()
+	$server:=New object:C1471()
+	$server.host:=$serverSettings.host
+	$server.port:=Num:C11($serverSettings.port)
+	$server.user:=$serverSettings.user
+	$server.password:=$serverSettings.password
+	
+	This:C1470.transporter:=4D:C1709.SMTPTransporter.new($server)
+	
+	
+Function getSetting($key : Text) : Text
+	var $setting : Object
+	$setting:=ds:C1482.Setting.query("key = :1"; $key).first()
+	If ($setting=Null:C1517)
+		// TODO: wrong 
+		// Web Form("Setting not found for key: "+$key)
+	End if 
+	return $setting.value
+	
+	
+Function getSMTPSettings() : Object
+	return New object:C1471(\
+		"host"; This:C1470.getSetting("smtp.host"); \
+		"user"; This:C1470.getSetting("smtp.user"); \
+		"password"; This:C1470.getSetting("smtp.password"); \
+		"port"; This:C1470.getSetting("smtp.port")\
+		)
+	
+	
+Function getDefaultEmailSettings() : Object
+	return New object:C1471(\
+		"from"; This:C1470.getSetting("email.from")\
+		)
+	
+	
+Function createReminderEmail($user : cs:C1710.UserEntity; $incident : cs:C1710.IncidentHistoryEntity) : Object
+	var $email : Object
+	var $emailSettings : Object
+	var $attachment1; $copy : 4D:C1709.File
+	var $htmlBody : Text
+	
+	$attachment1:=File:C1566("/SOURCES/Shared/assets/logo.png")
+	$copy:=$attachment1.copyTo(Folder:C1567("/PACKAGE"); fk overwrite:K87:5)
+	
+	
+	$emailSettings:=This:C1470.getDefaultEmailSettings()
+	$email:=New object:C1471()
+	$email.subject:="Report Incident : "+$incident.name
+	$email.from:=$emailSettings.from
+	$email.to:=$user.email
+	
+	$email.attachments:=New collection:C1472(4D:C1709.MailAttachment)
+	$email.attachments[0]:=4D:C1709.MailAttachment.new($attachment1; ""; "Qodly")
+	
+	
+	$htmlBody:="<html>"+\
+		"<body>"+\
+		"<p><strong>Incident déclaré par:</strong> "+$incident.reporter.firstName+" "+$incident.reporter.lastName+"</p>"+\
+		"<p><strong>Date de déclaration:</strong> "+String:C10($incident.incidentDate)+"</p>"+\
+		"<p><strong>Type de l'incident:</strong> "+String:C10($incident.incidentType)+"</p>"+\
+		"<p><strong>Détails de l'incident:</strong></p>"+\
+		"<ul>"+\
+		"<li><strong>Nom de l'incident:</strong> "+$incident.name+"</li>"+\
+		"<li><strong>Équipement concerné:</strong> "+String:C10($incident.equipment.type.label+" "+$incident.equipment.brand.brandName)+\
+		"</li>"
+	
+	If ($incident.incidentType="software")
+		$htmlBody:=$htmlBody+"<li><strong>Logiciel concerné:</strong> "+\
+			String:C10($incident.software.name+" "+$incident.software.category)+\
+			"</li>"
+	End if 
+	
+	$htmlBody:=$htmlBody+\
+		"<li><strong>Description:</strong> "+String:C10($incident.description)+"</li>"+\
+		"</ul>"+\
 		"<img src = 'cid:Qodly' >"+\
-        "</body>" + \
-        "</html>" 
-		
-		$email.htmlBody := $htmlBody
-        return $email
-
-    function sendReminderEmail($email : object) : text 
-        var $status: object
-
-        $status := this.transporter.checkConnection()
-        if ($status.success) 
-            $status := this.transporter.send($email)
-            return string($status.success)
-         else 
-            return string($status.status) + ", " + $status.statusText
-        end if
-    
-
-    function setReminder($user : cs.UserEntity; $incident : cs.IncidentHistoryEntity) : text 
-        var $email: object
-        $email := this.createReminderEmail($user; $incident)
-        return this.sendReminderEmail($email)
-    
-
-    
-
+		"</body>"+\
+		"</html>"
+	
+	$email.htmlBody:=$htmlBody
+	return $email
+	
+Function sendReminderEmail($email : Object) : Text
+	var $status : Object
+	
+	$status:=This:C1470.transporter.checkConnection()
+	If ($status.success)
+		$status:=This:C1470.transporter.send($email)
+		return String:C10($status.success)
+	Else 
+		return String:C10($status.status)+", "+$status.statusText
+	End if 
+	
+	
+Function setReminder($user : cs:C1710.UserEntity; $incident : cs:C1710.IncidentHistoryEntity) : Text
+	var $email : Object
+	$email:=This:C1470.createReminderEmail($user; $incident)
+	return This:C1470.sendReminderEmail($email)
+	
+	
+	
+	
+	
