@@ -1,9 +1,64 @@
 {
 	"forceLogin": false,
 	"permissions": {
-		"allowed": []
+		"allowed": [
+			{
+				"applyTo": "ds",
+				"type": "datastore",
+				"read": [
+					"administrator"
+				],
+				"create": [
+					"administrator"
+				],
+				"update": [
+					"administrator"
+				],
+				"drop": [
+					"administrator"
+				],
+				"execute": [
+					"administrator"
+				]
+			},
+			{
+				"applyTo": "User",
+				"type": "dataclass",
+				"read": [
+					"administrator",
+					"login"
+				],
+				"create": [
+					"administrator"
+				],
+				"update": [
+					"administrator"
+				]
+			},
+			{
+				"applyTo": "ds.authentify",
+				"type": "method",
+				"execute": [
+					"guest"
+				],
+				"promote": [
+					"login"
+				]
+			}
+		]
 	},
-	"privileges": [],
+	"privileges": [
+		{
+			"id": "disp7vtzWtwAVCRc4PqzhN",
+			"privilege": "administrator",
+			"includes": []
+		},
+		{
+			"id": "avjsZfyaq1osLoE6DeidPo",
+			"privilege": "login",
+			"includes": []
+		}
+	],
 	"roles": [
 		{
 			"id": "r1yDEEfH6xvN6t9d3eFCA2",
