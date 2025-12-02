@@ -70,7 +70,6 @@ Function generateGroup()
 	var $group : cs:C1710.GroupEntity
 	var $supervisor : cs:C1710.UserEntity
 	var $managers : cs:C1710.UserSelection
-	TRACE:C157
 	var $users : cs:C1710.UserSelection
 	$users:=ds:C1482.User.all()
 	

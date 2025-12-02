@@ -3,7 +3,9 @@ Class extends DataStoreImplementation
 exposed Function authentify($login : Text; $psw : Text) : Boolean
 	var $users : cs:C1710.UserSelection
 	var $user : cs:C1710.UserEntity
-	
+	If (($login="") && ($psw=""))
+		return Session:C1714.setPrivileges(["guest"; "guestPromoted"])
+	End if 
 	$users:=ds:C1482.User.query("firstName = :1"; $login)
 	If ($users.length=1)
 		$user:=$users.first()

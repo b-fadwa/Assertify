@@ -1,1 +1,298 @@
-var qodly_964b4626361e6f9ea9b5;(()=>{"use strict";var e,r,t,n,o,a,i,u,s,c,l,f,d,p,h,m,v,b,g,w,y,k={"webpack/container/entry/qodly_964b4626361e6f9ea9b5":(e,r,t)=>{var n={"./components":()=>Promise.all([t.e(95),t.e(189)]).then((()=>()=>t("webpack/container/remote/qodly_964b4626361e6f9ea9b5/components")))},o=(e,r)=>(t.R=r,r=t.o(n,e)?n[e]():Promise.resolve().then((()=>{throw new Error('Module "'+e+'" does not exist in container.')})),t.R=void 0,r),a=(e,r)=>{if(t.S){var n="default",o=t.S[n];if(o&&o!==e)throw new Error("Container initialization failed as it has already been initialized with a different share scope");return t.S[n]=e,t.I(n,r)}};t.d(r,{get:()=>o,init:()=>a})}},j={};function S(e){var r=j[e];if(void 0!==r)return r.exports;var t=j[e]={id:e,exports:{}};return k[e](t,t.exports,S),t.exports}S.m=k,S.c=j,S.n=e=>{var r=e&&e.__esModule?()=>e.default:()=>e;return S.d(r,{a:r}),r},S.d=(e,r)=>{for(var t in r)S.o(r,t)&&!S.o(e,t)&&Object.defineProperty(e,t,{enumerable:!0,get:r[t]})},S.f={},S.e=e=>Promise.all(Object.keys(S.f).reduce(((r,t)=>(S.f[t](e,r),r)),[])),S.u=e=>e+"."+{95:"f3718323",189:"436dc8cf"}[e]+".js",S.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(e){if("object"==typeof window)return window}}(),S.o=(e,r)=>Object.prototype.hasOwnProperty.call(e,r),e={},r="commonjs:",S.l=(t,n,o,a)=>{if(e[t])e[t].push(n);else{var i,u;if(void 0!==o)for(var s=document.getElementsByTagName("script"),c=0;c<s.length;c++){var l=s[c];if(l.getAttribute("src")==t||l.getAttribute("data-webpack")==r+o){i=l;break}}i||(u=!0,(i=document.createElement("script")).charset="utf-8",i.timeout=120,S.nc&&i.setAttribute("nonce",S.nc),i.setAttribute("data-webpack",r+o),i.src=t),e[t]=[n];var f=(r,n)=>{i.onerror=i.onload=null,clearTimeout(d);var o=e[t];if(delete e[t],i.parentNode&&i.parentNode.removeChild(i),o&&o.forEach((e=>e(n))),r)return r(n)},d=setTimeout(f.bind(null,void 0,{type:"timeout",target:i}),12e4);i.onerror=f.bind(null,i.onerror),i.onload=f.bind(null,i.onload),u&&document.head.appendChild(i)}},S.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},(()=>{S.S={};var e={},r={};S.I=(t,n)=>{n||(n=[]);var o=r[t];if(o||(o=r[t]={}),!(n.indexOf(o)>=0)){if(n.push(o),e[t])return e[t];S.o(S.S,t)||(S.S[t]={}),S.S[t];var a=[];return e[t]=a.length?Promise.all(a).then((()=>e[t]=1)):1}}})(),(()=>{var e;S.g.importScripts&&(e=S.g.location+"");var r=S.g.document;if(!e&&r&&(r.currentScript&&"SCRIPT"===r.currentScript.tagName.toUpperCase()&&(e=r.currentScript.src),!e)){var t=r.getElementsByTagName("script");if(t.length)for(var n=t.length-1;n>-1&&(!e||!/^http(s?):/.test(e));)e=t[n--].src}if(!e)throw new Error("Automatic publicPath is not supported in this browser");e=e.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),S.p=e})(),t=e=>{var r=e=>e.split(".").map((e=>+e==e?+e:e)),t=/^([^-+]+)?(?:-([^+]+))?(?:\+(.+))?$/.exec(e),n=t[1]?r(t[1]):[];return t[2]&&(n.length++,n.push.apply(n,r(t[2]))),t[3]&&(n.push([]),n.push.apply(n,r(t[3]))),n},n=(e,r)=>{e=t(e),r=t(r);for(var n=0;;){if(n>=e.length)return n<r.length&&"u"!=(typeof r[n])[0];var o=e[n],a=(typeof o)[0];if(n>=r.length)return"u"==a;var i=r[n],u=(typeof i)[0];if(a!=u)return"o"==a&&"n"==u||"s"==u||"u"==a;if("o"!=a&&"u"!=a&&o!=i)return o<i;n++}},o=e=>{var r=e[0],t="";if(1===e.length)return"*";if(r+.5){t+=0==r?">=":-1==r?"<":1==r?"^":2==r?"~":r>0?"=":"!=";for(var n=1,a=1;a<e.length;a++)n--,t+="u"==(typeof(u=e[a]))[0]?"-":(n>0?".":"")+(n=2,u);return t}var i=[];for(a=1;a<e.length;a++){var u=e[a];i.push(0===u?"not("+s()+")":1===u?"("+s()+" || "+s()+")":2===u?i.pop()+" "+i.pop():o(u))}return s();function s(){return i.pop().replace(/^\((.+)\)$/,"$1")}},a=(e,r)=>{if(0 in e){r=t(r);var n=e[0],o=n<0;o&&(n=-n-1);for(var i=0,u=1,s=!0;;u++,i++){var c,l,f=u<e.length?(typeof e[u])[0]:"";if(i>=r.length||"o"==(l=(typeof(c=r[i]))[0]))return!s||("u"==f?u>n&&!o:""==f!=o);if("u"==l){if(!s||"u"!=f)return!1}else if(s)if(f==l)if(u<=n){if(c!=e[u])return!1}else{if(o?c>e[u]:c<e[u])return!1;c!=e[u]&&(s=!1)}else if("s"!=f&&"n"!=f){if(o||u<=n)return!1;s=!1,u--}else{if(u<=n||l<f!=o)return!1;s=!1}else"s"!=f&&"n"!=f&&(s=!1,u--)}}var d=[],p=d.pop.bind(d);for(i=1;i<e.length;i++){var h=e[i];d.push(1==h?p()|p():2==h?p()&p():h?a(h,r):!p())}return!!p()},i=(e,r)=>e&&S.o(e,r),u=e=>(e.loaded=1,e.get()),s=e=>Object.keys(e).reduce(((r,t)=>(e[t].eager&&(r[t]=e[t]),r)),{}),c=(e,r,t)=>{var o=t?s(e[r]):e[r];return Object.keys(o).reduce(((e,r)=>!e||!o[e].loaded&&n(e,r)?r:e),0)},l=(e,r,t,n)=>"Unsatisfied version "+t+" from "+(t&&e[r][t].from)+" of shared singleton module "+r+" (required "+o(n)+")",f=e=>{throw new Error(e)},d=e=>{"undefined"!=typeof console&&console.warn&&console.warn(e)},h=(e,r,t)=>t?t():((e,r)=>f("Shared module "+r+" doesn't exist in shared scope "+e))(e,r),m=(p=e=>function(r,t,n,o,a){var i=S.I(r);return i&&i.then&&!n?i.then(e.bind(e,r,S.S[r],t,!1,o,a)):e(r,S.S[r],t,n,o,a)})(((e,r,t,n,o)=>{if(!i(r,t))return h(e,t,o);var a=c(r,t,n);return u(r[t][a])})),v=p(((e,r,t,n,o,s)=>{if(!i(r,t))return h(e,t,s);var f=c(r,t,n);return a(o,f)||d(l(r,t,f,o)),u(r[t][f])})),b={},g={"webpack/sharing/consume/default/@ws-ui/craftjs-core":()=>m("default","@ws-ui/craftjs-core",!1),"webpack/sharing/consume/default/@ws-ui/webform-editor":()=>v("default","@ws-ui/webform-editor",!1,[4,0,3,20]),"webpack/sharing/consume/default/react":()=>v("default","react",!1,[1,17,0,2]),"webpack/sharing/consume/default/react/jsx-runtime":()=>v("default","react/jsx-runtime",!1,[1,17,0,2])},w={189:["webpack/sharing/consume/default/@ws-ui/craftjs-core","webpack/sharing/consume/default/@ws-ui/webform-editor","webpack/sharing/consume/default/react","webpack/sharing/consume/default/react/jsx-runtime"]},y={},S.f.consumes=(e,r)=>{S.o(w,e)&&w[e].forEach((e=>{if(S.o(b,e))return r.push(b[e]);if(!y[e]){var t=r=>{b[e]=0,S.m[e]=t=>{delete S.c[e],t.exports=r()}};y[e]=!0;var n=r=>{delete b[e],S.m[e]=t=>{throw delete S.c[e],r}};try{var o=g[e]();o.then?r.push(b[e]=o.then(t).catch(n)):t(o)}catch(e){n(e)}}}))},(()=>{var e={784:0};S.f.j=(r,t)=>{var n=S.o(e,r)?e[r]:void 0;if(0!==n)if(n)t.push(n[2]);else{var o=new Promise(((t,o)=>n=e[r]=[t,o]));t.push(n[2]=o);var a=S.p+S.u(r),i=new Error;S.l(a,(t=>{if(S.o(e,r)&&(0!==(n=e[r])&&(e[r]=void 0),n)){var o=t&&("load"===t.type?"missing":t.type),a=t&&t.target&&t.target.src;i.message="Loading chunk "+r+" failed.\n("+o+": "+a+")",i.name="ChunkLoadError",i.type=o,i.request=a,n[1](i)}}),"chunk-"+r,r)}};var r=(r,t)=>{var n,o,[a,i,u]=t,s=0;if(a.some((r=>0!==e[r]))){for(n in i)S.o(i,n)&&(S.m[n]=i[n]);u&&u(S)}for(r&&r(t);s<a.length;s++)o=a[s],S.o(e,o)&&e[o]&&e[o][0](),e[o]=0},t=self.webpackChunkcommonjs=self.webpackChunkcommonjs||[];t.forEach(r.bind(null,0)),t.push=r.bind(null,t.push.bind(t))})(),S.nc=void 0;var x=S("webpack/container/entry/qodly_964b4626361e6f9ea9b5");qodly_964b4626361e6f9ea9b5=x})();
+import { i as init_1, q as qodly_964b4626361e6f9ea9b5__mf_v__runtimeInit__mf_v__ } from './assets/qodly_964b4626361e6f9ea9b5__mf_v__runtimeInit__mf_v__-Bys3WEz0.js';
+import exposesMap from './assets/virtualExposes-CdH829vv.js';
+import { _ as __vitePreload } from './assets/preload-helper-CqoC6PUU.js';
+
+const importMap = {
+      
+        "@ws-ui/craftjs-core": async () => {
+          let pkg = await __vitePreload(() => import('./assets/index-CzA7WObD.js'),true              ?[]:void 0);
+          return pkg
+        }
+      ,
+        "@ws-ui/craftjs-layers": async () => {
+          let pkg = await __vitePreload(() => import('./assets/index-qT2JP5mt.js'),true              ?[]:void 0);
+          return pkg
+        }
+      ,
+        "@ws-ui/craftjs-utils": async () => {
+          let pkg = await __vitePreload(() => import('./assets/index-BZn6OY2a.js'),true              ?[]:void 0);
+          return pkg
+        }
+      ,
+        "@ws-ui/shared": async () => {
+          let pkg = await __vitePreload(() => import('./assets/index.es-mQeHu_YO.js'),true              ?[]:void 0);
+          return pkg
+        }
+      ,
+        "@ws-ui/webform-editor": async () => {
+          let pkg = await __vitePreload(() => import('./assets/index.es-CxRiEx3_.js').then(n => n.i),true              ?[]:void 0);
+          return pkg
+        }
+      ,
+        "react": async () => {
+          let pkg = await __vitePreload(() => import('./assets/index-BrSEIiFz.js').then(n => n.i),true              ?[]:void 0);
+          return pkg
+        }
+      ,
+        "react-dom": async () => {
+          let pkg = await __vitePreload(() => import('./assets/index-CCrTcBCJ.js').then(n => n.i),true              ?[]:void 0);
+          return pkg
+        }
+      ,
+        "react/jsx-runtime": async () => {
+          let pkg = await __vitePreload(() => import('./assets/jsx-runtime-BXArt8hS.js').then(n => n.j),true              ?[]:void 0);
+          return pkg
+        }
+      
+    };
+      const usedShared = {
+      
+          "@ws-ui/craftjs-core": {
+            name: "@ws-ui/craftjs-core",
+            version: "0.2.26",
+            scope: ["default"],
+            loaded: false,
+            from: "qodly_964b4626361e6f9ea9b5",
+            async get () {
+              usedShared["@ws-ui/craftjs-core"].loaded = true;
+              const {"@ws-ui/craftjs-core": pkgDynamicImport} = importMap; 
+              const res = await pkgDynamicImport();
+              const exportModule = {...res};
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              });
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^0.2.26"
+            }
+          }
+        ,
+          "@ws-ui/craftjs-layers": {
+            name: "@ws-ui/craftjs-layers",
+            version: "0.2.4",
+            scope: ["default"],
+            loaded: false,
+            from: "qodly_964b4626361e6f9ea9b5",
+            async get () {
+              usedShared["@ws-ui/craftjs-layers"].loaded = true;
+              const {"@ws-ui/craftjs-layers": pkgDynamicImport} = importMap; 
+              const res = await pkgDynamicImport();
+              const exportModule = {...res};
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              });
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^0.2.4"
+            }
+          }
+        ,
+          "@ws-ui/craftjs-utils": {
+            name: "@ws-ui/craftjs-utils",
+            version: "0.2.3",
+            scope: ["default"],
+            loaded: false,
+            from: "qodly_964b4626361e6f9ea9b5",
+            async get () {
+              usedShared["@ws-ui/craftjs-utils"].loaded = true;
+              const {"@ws-ui/craftjs-utils": pkgDynamicImport} = importMap; 
+              const res = await pkgDynamicImport();
+              const exportModule = {...res};
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              });
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^0.2.3"
+            }
+          }
+        ,
+          "@ws-ui/shared": {
+            name: "@ws-ui/shared",
+            version: "1.6.0",
+            scope: ["default"],
+            loaded: false,
+            from: "qodly_964b4626361e6f9ea9b5",
+            async get () {
+              usedShared["@ws-ui/shared"].loaded = true;
+              const {"@ws-ui/shared": pkgDynamicImport} = importMap; 
+              const res = await pkgDynamicImport();
+              const exportModule = {...res};
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              });
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^1.6.0"
+            }
+          }
+        ,
+          "@ws-ui/webform-editor": {
+            name: "@ws-ui/webform-editor",
+            version: "1.6.0",
+            scope: ["default"],
+            loaded: false,
+            from: "qodly_964b4626361e6f9ea9b5",
+            async get () {
+              usedShared["@ws-ui/webform-editor"].loaded = true;
+              const {"@ws-ui/webform-editor": pkgDynamicImport} = importMap; 
+              const res = await pkgDynamicImport();
+              const exportModule = {...res};
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              });
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^1.6.0"
+            }
+          }
+        ,
+          "react": {
+            name: "react",
+            version: "17.0.2",
+            scope: ["default"],
+            loaded: false,
+            from: "qodly_964b4626361e6f9ea9b5",
+            async get () {
+              usedShared["react"].loaded = true;
+              const {"react": pkgDynamicImport} = importMap; 
+              const res = await pkgDynamicImport();
+              const exportModule = {...res};
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              });
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^17.0.2"
+            }
+          }
+        ,
+          "react-dom": {
+            name: "react-dom",
+            version: "17.0.2",
+            scope: ["default"],
+            loaded: false,
+            from: "qodly_964b4626361e6f9ea9b5",
+            async get () {
+              usedShared["react-dom"].loaded = true;
+              const {"react-dom": pkgDynamicImport} = importMap; 
+              const res = await pkgDynamicImport();
+              const exportModule = {...res};
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              });
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^17.0.2"
+            }
+          }
+        ,
+          "react/jsx-runtime": {
+            name: "react/jsx-runtime",
+            version: "17.0.2",
+            scope: ["default"],
+            loaded: false,
+            from: "qodly_964b4626361e6f9ea9b5",
+            async get () {
+              usedShared["react/jsx-runtime"].loaded = true;
+              const {"react/jsx-runtime": pkgDynamicImport} = importMap; 
+              const res = await pkgDynamicImport();
+              const exportModule = {...res};
+              // All npm packages pre-built by vite will be converted to esm
+              Object.defineProperty(exportModule, "__esModule", {
+                value: true,
+                enumerable: false
+              });
+              return function () {
+                return exportModule
+              }
+            },
+            shareConfig: {
+              singleton: true,
+              requiredVersion: "^17.0.2"
+            }
+          }
+        
+    };
+      const usedRemotes = [
+      ];
+
+const initTokens = {};
+  const shareScopeName = "default";
+  const mfName = "qodly_964b4626361e6f9ea9b5";
+  async function init(shared = {}, initScope = []) {
+    const initRes = init_1({
+      name: mfName,
+      remotes: usedRemotes,
+      shared: usedShared,
+      plugins: [],
+      shareStrategy: 'version-first'
+    });
+    // handling circular init calls
+    var initToken = initTokens[shareScopeName];
+    if (!initToken)
+      initToken = initTokens[shareScopeName] = { from: mfName };
+    if (initScope.indexOf(initToken) >= 0) return;
+    initScope.push(initToken);
+    initRes.initShareScopeMap('default', shared);
+    try {
+      await Promise.all(await initRes.initializeSharing('default', {
+        strategy: 'version-first',
+        from: "build",
+        initScope
+      }));
+    } catch (e) {
+      console.error(e);
+    }
+    qodly_964b4626361e6f9ea9b5__mf_v__runtimeInit__mf_v__.initResolve(initRes);
+    return initRes
+  }
+
+  function getExposes(moduleName) {
+    if (!(moduleName in exposesMap)) throw new Error(`Module ${moduleName} does not exist in container.`)
+    return (exposesMap[moduleName])().then(res => () => res)
+  }
+
+export { getExposes as get, init };

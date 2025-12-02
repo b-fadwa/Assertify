@@ -87,6 +87,42 @@
 						"events": [
 							"oninit"
 						],
+						"id": "jGtckghJgJMyiHMYpmieeD",
+						"method": "ds.authentify",
+						"params": [
+							{
+								"name": "login",
+								"type": "Text",
+								"datasource": "",
+								"id": "2YfeJQZiM7E2npyaA2H4Ps",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": ""
+							},
+							{
+								"name": "psw",
+								"type": "Text",
+								"datasource": "",
+								"id": "m46TTNvJxtuRkQPuAKhQpG",
+								"isHardCoded": true,
+								"hardCodedType": "string",
+								"hardCodedValue": ""
+							}
+						],
+						"datasource": "",
+						"allowedOnHTTPGET": false,
+						"returns": {
+							"name": "result",
+							"type": "Boolean"
+						},
+						"feedback": false
+					},
+					{
+						"type": "method",
+						"dataclass": "DataStore",
+						"events": [
+							"oninit"
+						],
 						"id": "iqn3KfHT3GxhE9DByncREH",
 						"method": "ds.getManifestObject",
 						"params": [],

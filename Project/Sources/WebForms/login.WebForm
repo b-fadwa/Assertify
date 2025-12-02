@@ -140,8 +140,7 @@
 				"2Bg0s-3tdd",
 				"nr9w3p86fL",
 				"7xFHnMhVtm",
-				"BIssL72Qrw",
-				"ABe1rA5kAx"
+				"BIssL72Qrw"
 			],
 			"linkedNodes": {}
 		},
@@ -243,7 +242,8 @@
 				"iterableChild": true,
 				"style": {
 					"marginTop": "0px",
-					"marginBottom": "6px"
+					"marginBottom": "6px",
+					"height": "40px"
 				}
 			},
 			"displayName": "Text Input",
@@ -262,9 +262,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "User name or Email address<br>",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "User name or Email address<br>",
 				"style": {
 					"color": "#666682"
 				},
@@ -293,7 +294,11 @@
 				"eyePosition": "right",
 				"intervals": [],
 				"datasource": "username",
-				"dataType": "string"
+				"dataType": "string",
+				"twentyFourHours": true,
+				"style": {
+					"height": "100%"
+				}
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -327,8 +332,7 @@
 			"parent": "ZmPOuDolKU",
 			"hidden": false,
 			"nodes": [
-				"W02Qxw2pNu",
-				"B0fAf46qqn"
+				"W02Qxw2pNu"
 			],
 			"linkedNodes": {}
 		},
@@ -370,112 +374,6 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"B0fAf46qqn": {
-			"type": {
-				"resolvedName": "StyleBox"
-			},
-			"isCanvas": true,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"display": "flex",
-					"marginLeft": "0px",
-					"paddingLeft": "0px",
-					"paddingRight": "0px",
-					"paddingBottom": "0px",
-					"paddingTop": "0px",
-					"alignItems": "center",
-					"marginBottom": "0px",
-					"marginRight": "0px",
-					"marginTop": "0px",
-					"justifyContent": "flex-end",
-					"width": "auto",
-					"cursor": "pointer"
-				}
-			},
-			"displayName": "Stylebox",
-			"custom": {
-				"states:cEGLv7kFTWKsPtM7apgQtt": {
-					"style": {
-						"display": "flex"
-					}
-				},
-				"states:47jGZDYzEGafJZPswZLZey": {
-					"style": {
-						"display": "none"
-					}
-				}
-			},
-			"parent": "2Bg0s-3tdd",
-			"hidden": false,
-			"nodes": [
-				"9XkFukmpnD",
-				"gUNWEawgTk"
-			],
-			"linkedNodes": {}
-		},
-		"9XkFukmpnD": {
-			"type": {
-				"resolvedName": "Icon"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"icon": "fa-solid fa-eye",
-				"style": {
-					"marginTop": "0px",
-					"marginRight": "0px",
-					"marginBottom": "0px",
-					"marginLeft": "0px"
-				}
-			},
-			"displayName": "Icon",
-			"custom": {},
-			"parent": "B0fAf46qqn",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"gUNWEawgTk": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"marginTop": "0px",
-					"marginRight": "0px",
-					"marginBottom": "0px",
-					"marginLeft": "6px",
-					"width": "33px"
-				},
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Show",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": ""
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "B0fAf46qqn",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"nr9w3p86fL": {
 			"type": {
 				"resolvedName": "TextInput"
@@ -489,7 +387,8 @@
 				"iterableChild": true,
 				"style": {
 					"marginBottom": "0px",
-					"marginTop": "0px"
+					"marginTop": "0px",
+					"height": "40px"
 				}
 			},
 			"displayName": "Text Input",
@@ -508,10 +407,11 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Password",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
 				"deletable": true,
-				"text": "Password",
 				"style": {
 					"color": "#666682"
 				}
@@ -539,7 +439,11 @@
 				"dataType": "string",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true,
+				"style": {
+					"height": "100%"
+				}
 			},
 			"displayName": "Input",
 			"custom": {
@@ -658,42 +562,6 @@
 			"displayName": "Icon",
 			"custom": {},
 			"parent": "BIssL72Qrw",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"ABe1rA5kAx": {
-			"type": {
-				"resolvedName": "Text"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"iterableChild": true,
-				"style": {
-					"textDecorationLine": " underline",
-					"fontSize": "12px",
-					"marginTop": "6px"
-				},
-				"doc": [
-					{
-						"type": "paragraph",
-						"children": [
-							{
-								"text": "Forgot your password?",
-								"bold": false,
-								"italic": false,
-								"underlined": false,
-								"strikethrough": false
-							}
-						]
-					}
-				],
-				"datasource": ""
-			},
-			"displayName": "Text",
-			"custom": {},
-			"parent": "ZmPOuDolKU",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

@@ -303,7 +303,7 @@
 						"externalLink": false,
 						"loader": "",
 						"parent": "same-tab",
-						"target": "startPage",
+						"target": "index",
 						"isHardCoded": true
 					}
 				],
@@ -768,13 +768,17 @@
 				"events": [],
 				"style": {
 					"width": "100%",
-					"height": "600px"
+					"height": "600px",
+					"paddingRight": "0px",
+					"paddingBottom": "0px",
+					"paddingTop": "0px",
+					"paddingLeft": "0px"
 				},
 				"classNames": [
 					"flexGrow1"
 				],
 				"datasource": "",
-				"webform": "startPage"
+				"webform": "index"
 			},
 			"displayName": "Page Loader",
 			"custom": {},

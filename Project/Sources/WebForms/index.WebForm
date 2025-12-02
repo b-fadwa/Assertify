@@ -1,0 +1,81 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": [],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "isConnected",
+				"id": "skLMuU1BqNyVriH2dvkHuz",
+				"conditions": {
+					"id": "vfPdXkx4JdKp3r8RV6ogw8",
+					"type": "privilege",
+					"name": "condition",
+					"value": "login",
+					"valueType": "hardCoded",
+					"op": "eq"
+				}
+			}
+		]
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"airyMode": true,
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"paddingRight": "0px",
+					"paddingBottom": "0px",
+					"paddingTop": "0px",
+					"paddingLeft": "0px"
+				}
+			},
+			"displayName": "Page",
+			"custom": {},
+			"parent": "",
+			"hidden": false,
+			"nodes": [
+				"ZioDO3ZS-c"
+			],
+			"linkedNodes": {}
+		},
+		"ZioDO3ZS-c": {
+			"type": {
+				"resolvedName": "WebformLoader"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"style": {
+					"width": "100%",
+					"height": "100%",
+					"paddingRight": "0px",
+					"paddingBottom": "0px",
+					"paddingTop": "0px",
+					"paddingLeft": "0px"
+				},
+				"webform": "login"
+			},
+			"displayName": "Page Loader",
+			"custom": {
+				"states:skLMuU1BqNyVriH2dvkHuz": {
+					"webform": "startPage"
+				}
+			},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		}
+	}
+}

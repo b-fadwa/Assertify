@@ -47,49 +47,42 @@
 				"name": "line",
 				"content": "self {\n\t    box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.5); /* Light grey color with opacity */\n}",
 				"parentId": null,
-				"id": "S3b5RVGSSSyOPqwoeYrz9",
-				"scope": "local"
+				"id": "S3b5RVGSSSyOPqwoeYrz9"
 			},
 			{
 				"name": "sidebar",
 				"content": "self {\n    background: linear-gradient(180deg, #0B0E3C 0%, #17225A 100%);\n}",
 				"parentId": null,
-				"id": "_07MCwGqb-WnyCF-fcFxM",
-				"scope": "local"
+				"id": "_07MCwGqb-WnyCF-fcFxM"
 			},
 			{
 				"name": "dropDownParent",
 				"content": "self { position: relative; display: inline-block }\nself:hover .dropDownChild {display: block}",
 				"parentId": null,
-				"id": "YoE8NlkqHGo8nenIOoSjs",
-				"scope": "local"
+				"id": "YoE8NlkqHGo8nenIOoSjs"
 			},
 			{
 				"name": "dropDownChild",
 				"content": "self {\n\tdisplay: none;\n}",
 				"parentId": null,
-				"id": "CkbZXH_wOLNaU8aDIYI7s",
-				"scope": "local"
+				"id": "CkbZXH_wOLNaU8aDIYI7s"
 			},
 			{
 				"name": "notificationCSS",
 				"content": "self {\n\tbackground-color: white;\n}\n\nself:has(p span[title=\"false\"]) {\n\tbackground-color: #e4eafd !important;\n\tfont-weight: 500 !important;\n\tcursor: pointer;\n}",
 				"parentId": null,
-				"id": "Pp_dZCvDnEkB0_jHUyWAs",
-				"scope": "local"
+				"id": "Pp_dZCvDnEkB0_jHUyWAs"
 			},
 			{
 				"name": "treeView",
 				"content": "self .flex.items-center.gap-1 {\n\tmargin-top: 20px !important;\n\tmargin-left: 25px;\n\tpadding: 5px; \n\tborder-radius: 5px;\n}\n\nself .flex.items-center.gap-1:hover{\n\tbackground-color: #2d56cd;\n\tbackground: linear-gradient(to top, #1e3a8a, #2563eb); \n\tbox-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);\n\tcolor: #fff;\n\twidth: 80%;\n\tpadding-left: 25px;\t\n}\n\nself .cursor-pointer {\n\tfont-size: 1vw;\n\t/* font-size: 16px !important; */\n\tfont-family: Helvetica;\n\tmargin-left: 10px;\n}\n\nself .fa-solid[class*=\"fa-\"].mr-1 {\n\tfont-size: 18px;\n}",
 				"parentId": null,
-				"scope": "local",
 				"id": "95UL9pflUpVH_sq1KPLag"
 			},
 			{
 				"name": "Scroll",
 				"content": "self {\n  scrollbar-width: none;      \n}",
 				"parentId": null,
-				"scope": "local",
 				"id": "ELcqw21fRtHxrxAc4SgWH"
 			}
 		],
@@ -587,7 +580,8 @@
 			"parent": "Dbf6XtRi3k",
 			"hidden": false,
 			"nodes": [
-				"geeQFsJnCm"
+				"geeQFsJnCm",
+				"Y-OIBb7_7D"
 			],
 			"linkedNodes": {}
 		},
@@ -2009,6 +2003,52 @@
 			"displayName": "Tree",
 			"custom": {},
 			"parent": "f8FETc6SaD",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"Y-OIBb7_7D": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [
+					{
+						"type": "qodly-pro-action",
+						"id": "9nJAoHk6YCZLFEPbu6CpPe",
+						"events": [
+							"onclick"
+						],
+						"actionType": "auth",
+						"action": "logout"
+					},
+					{
+						"type": "navigation",
+						"id": "iVQjmW6xyWaME773FRJzB3",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "index",
+						"isHardCoded": true
+					}
+				],
+				"icon": "fa-solid fa-arrow-right-from-bracket",
+				"style": {
+					"fontSize": "18px",
+					"cursor": "pointer",
+					"marginRight": "0px",
+					"display": "block",
+					"position": "static"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "cYsCtOHDs3",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
