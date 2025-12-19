@@ -54,8 +54,7 @@ exposed Function setCss($serverRef : Text; $cssClass : Text)
 	$component:=Web Form:C1735[$serverRef]
 	$component.addCSSClass($cssClass)
 	
-exposed Function switchDisplay($toHideRef : Text; $cssClass : Text; $selectionLength : Variant; $toShowRef : Text)  //used to manage the visibilities 
-	// Ayoub: can we replace it with states ??
+exposed Function switchDisplay($toHideRef : Text; $cssClass : Text; $selectionLength : Variant; $toShowRef : Text)
 	var $component : 4D:C1709.WebFormItem
 	var $component2 : 4D:C1709.WebFormItem
 	$component:=Web Form:C1735[$toShowRef]
@@ -80,7 +79,7 @@ exposed Function extractMonth($incidentDate : Date) : Integer
 	return $Month
 	
 	
-exposed Function requiredField($input : Variant; $serverRef : Text) : Boolean  //used to make an empty field required
+exposed Function requiredField($input : Variant; $serverRef : Text) : Boolean
 	var $component : 4D:C1709.WebFormItem
 	$component:=Web Form:C1735[$serverRef]
 	

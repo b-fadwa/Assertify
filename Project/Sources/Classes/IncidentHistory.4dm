@@ -7,7 +7,6 @@ exposed Function filterIncidents($statut : Text)->$incidents : cs:C1710.Incident
 	$incidents:=This:C1470.query("resolutionStatus = :1 "; $statut).orderBy("incidentDate desc")
 	
 exposed Function searchByName($name : Text; $status : Text) : cs:C1710.IncidentHistorySelection
-	//return this.query("name = :1 and resolutionStatus = :2 and user.ID = :3"; "@"+$name+"@"; $status; ds.User.getCurrentUser().ID)
 	return This:C1470.query("name = :1 and resolutionStatus = :2"; "@"+$name+"@"; $status)
 	
 exposed Function searchByDate($searchD : Date; $status : Text) : cs:C1710.IncidentHistorySelection
