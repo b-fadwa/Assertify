@@ -42,8 +42,6 @@
 			"parent": "",
 			"hidden": false,
 			"nodes": [
-				"gbX7UhTpEN",
-				"Ictr93CkAQ",
 				"-mgCZv3Tp7",
 				"eiQUSMy9CY",
 				"X_MXB9bIb5",
@@ -198,48 +196,6 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"gbX7UhTpEN": {
-			"type": {
-				"resolvedName": "WebformLoader"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"webform": "AddEquSoftware2",
-				"serverSideRef": "eventDialog",
-				"classNames": [
-					"modalCSS_",
-					"visibility"
-				]
-			},
-			"displayName": "Page Loader",
-			"custom": {},
-			"parent": "ROOT",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"Ictr93CkAQ": {
-			"type": {
-				"resolvedName": "WebformLoader"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"datasource": "",
-				"webform": "AddLicToSoftware",
-				"classNames": [
-					"visibility",
-					"modalCSS_"
-				]
-			},
-			"displayName": "Page Loader",
-			"custom": {},
-			"parent": "ROOT",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
 		"6TCw7GlxKX": {
 			"type": {
 				"resolvedName": "Icon"
@@ -373,9 +329,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -408,7 +365,8 @@
 				"datasource": "demo:equipment.comment",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -448,9 +406,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -482,7 +441,8 @@
 				"datasource": "demo:equipment.inventoryNumber",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -556,9 +516,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -590,7 +551,8 @@
 				"datasource": "demo:equipment.serialNumber",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -630,9 +592,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -664,7 +627,8 @@
 				"datasource": "demo:equipment.purchaseDate",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -704,9 +668,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -738,7 +703,8 @@
 				"datasource": "demo:equipment.finalWarrantyDate",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},

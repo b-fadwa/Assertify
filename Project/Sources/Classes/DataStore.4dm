@@ -6,7 +6,7 @@ exposed Function authentify($login : Text; $psw : Text) : Boolean
 	If (($login="") && ($psw=""))
 		return Session:C1714.setPrivileges(["guest"; "guestPromoted"])
 	End if 
-	$users:=ds:C1482.User.query("firstName = :1"; $login)
+	$users:=ds:C1482.User.query("email = :1"; $login)
 	If ($users.length=1)
 		$user:=$users.first()
 		
@@ -54,8 +54,7 @@ exposed Function setCss($serverRef : Text; $cssClass : Text)
 	$component:=Web Form:C1735[$serverRef]
 	$component.addCSSClass($cssClass)
 	
-exposed Function switchDisplay($toHideRef : Text; $cssClass : Text; $selectionLength : Variant; $toShowRef : Text)  //used to manage the visibilities 
-	// Ayoub: can we replace it with states ??
+exposed Function switchDisplay($toHideRef : Text; $cssClass : Text; $selectionLength : Variant; $toShowRef : Text)
 	var $component : 4D:C1709.WebFormItem
 	var $component2 : 4D:C1709.WebFormItem
 	$component:=Web Form:C1735[$toShowRef]
@@ -80,7 +79,7 @@ exposed Function extractMonth($incidentDate : Date) : Integer
 	return $Month
 	
 	
-exposed Function requiredField($input : Variant; $serverRef : Text) : Boolean  //used to make an empty field required
+exposed Function requiredField($input : Variant; $serverRef : Text) : Boolean
 	var $component : 4D:C1709.WebFormItem
 	$component:=Web Form:C1735[$serverRef]
 	
@@ -175,30 +174,30 @@ exposed Function displayTreeArray()->$treeArrayData : Collection
 		{key: "1"; \
 		label: "Dashboard"; \
 		icon: "fa-solid fa-chart-column"; \
-		page: "79v19wrp5r"; \
+		webform: "79v19wrp5r"; \
 		target: "dashboard"\
 		}; \
 		{key: "2"; \
 		label: "IT assets"; \
 		icon: "fa-solid fa-box"; \
-		page: "79v19wrp5r"; \
+		webform: "79v19wrp5r"; \
 		children: [\
 		{key: "2-1"; \
 		label: "Equipments"; \
 		icon: "fa-solid fa-desktop"; \
-		page: "79v19wrp5r"; \
+		webform: "79v19wrp5r"; \
 		target: "equipmentInventory"\
 		}; \
 		{key: "2-2"; \
 		label: "Softwares"; \
 		icon: "fa-solid fa-brands fa-windows"; \
-		page: "79v19wrp5r"; \
+		webform: "79v19wrp5r"; \
 		target: "softwareInventory"\
 		}; \
 		{key: "2-3"; \
 		label: "Licenses"; \
 		icon: "fa-solid fa-key"; \
-		page: "79v19wrp5r"; \
+		webform: "79v19wrp5r"; \
 		target: "licenseInventory"\
 		}\
 		]\
@@ -206,25 +205,25 @@ exposed Function displayTreeArray()->$treeArrayData : Collection
 		{key: "3"; \
 		label: "Incidents"; \
 		icon: "fa-solid fa-triangle-exclamation"; \
-		page: "79v19wrp5r"; \
+		webform: "79v19wrp5r"; \
 		target: "incidentHistory"\
 		}; \
 		{key: "4"; \
 		label: "Calendar"; \
 		icon: "fa-solid fa-calendar-days"; \
-		page: "79v19wrp5r"; \
+		webform: "79v19wrp5r"; \
 		target: "calendar"\
 		}; \
 		{key: "5"; \
 		label: "Users"; \
 		icon: "fa-solid fa-users"; \
-		page: "79v19wrp5r"; \
+		webform: "79v19wrp5r"; \
 		target: "userManagement"\
 		}; \
 		{key: "6"; \
 		label: "Settings"; \
 		icon: "fa-solid fa-gear"; \
-		page: "79v19wrp5r"; \
+		webform: "79v19wrp5r"; \
 		target: "settings"\
 		}]
 	
@@ -235,6 +234,6 @@ exposed Function displayTreeArray()->$treeArrayData : Collection
 	For each ($equType; $types)
 		$childNode:=New object:C1471("key"; "2-1-"+String:C10($equType.ID); "label"; $equType.label; "icon"; "fa-solid fa-tag"; "variables"; [{target: "Shared:Page1"; value: $equType.label}; {target: "filter"; value: $equType.label}])
 		$childNode.target:="equipmentByTypeInventory"
-		$childNode.page:="79v19wrp5r"
+		$childNode.webform:="79v19wrp5r"
 		$materialNode.children.push($childNode)
 	End for each 

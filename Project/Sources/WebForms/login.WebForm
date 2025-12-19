@@ -211,7 +211,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Username or Email Address",
+								"text": "Email Address",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -223,7 +223,11 @@
 				"datasource": ""
 			},
 			"displayName": "Text",
-			"custom": {},
+			"custom": {
+				"__t": {
+					"doc": []
+				}
+			},
 			"parent": "NWz5g0LT_U",
 			"hidden": false,
 			"nodes": [],

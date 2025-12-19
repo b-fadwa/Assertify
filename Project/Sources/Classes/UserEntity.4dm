@@ -1,32 +1,32 @@
 Class extends Entity
 
-exposed function setGroupUser($selectedGroup : cs.GroupEntity)
-	var $saved: object
-	var $status: boolean := false
+exposed Function setGroupUser($selectedGroup : cs:C1710.GroupEntity)
+	var $saved : Object
+	var $status : Boolean:=False:C215
 	
-	this.group := $selectedGroup
-	$saved := this.save()
-	if ($saved.success)
-		web Form.setMessage("User successfully added to the group!")
-	else 
-		web Form.setError("An error occured")
-	end if 
+	This:C1470.group:=$selectedGroup
+	$saved:=This:C1470.save()
+	If ($saved.success)
+		Web Form:C1735.setMessage("User successfully added to the group!")
+	Else 
+		Web Form:C1735.setError("An error occured")
+	End if 
 	
-	
-exposed function getIncidentHistoryUser($status : text; $search : text; $searchDate : date) : cs.IncidentHistorySelection
-	var $IncidentHistory: cs.IncidentHistorySelection
-	$IncidentHistory := this.incidentHistories.query("resolutionStatus = :1 AND name = :2"; $status; "@"+$search+"@")
+exposed Function getIncidentHistoryUser($status : Text; $search : Text; $searchDate : Date) : cs:C1710.IncidentHistorySelection
+	var $IncidentHistory : cs:C1710.IncidentHistorySelection
+	$IncidentHistory:=This:C1470.incidentHistories.query("resolutionStatus = :1 AND name = :2"; $status; "@"+$search+"@")
 	
 	return $IncidentHistory
 	
 	
-exposed function orderNotifications()->$Notifs : cs.NotificationSelection
-	$Notifs := this.notifications.orderBy("createdAt desc, creationTime desc")
+exposed Function orderNotifications()->$Notifs : cs:C1710.NotificationSelection
+	$Notifs:=This:C1470.notifications.orderBy("createdAt desc, creationTime desc")
 	
 	
-exposed function renderUnreadNotifications()->$Notifs : cs.NotificationSelection
-	$Notifs := this.notifications.query("isRead = :1"; false).orderBy("createdAt desc, creationTime desc")
+exposed Function renderUnreadNotifications()->$Notifs : cs:C1710.NotificationSelection
+	$Notifs:=This:C1470.notifications.query("isRead = :1"; False:C215).orderBy("createdAt desc, creationTime desc")
 	
 	
-exposed function getEquipments() : cs.EquipmentSelection
-	return this.equipments.equipment
+exposed Function getEquipments() : cs:C1710.EquipmentSelection
+	return This:C1470.equipments.equipment
+	

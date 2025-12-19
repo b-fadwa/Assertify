@@ -1,11 +1,12 @@
 Class extends DataClass
 
-exposed function pieChart($typeEqu : text)->$result : collection
-	var $status: cs.StatusSelection
-	$status := this.all()
+exposed Function pieChart($typeEqu : Text)->$result : Collection
+	var $status : cs:C1710.StatusSelection
+	$status:=This:C1470.all()
 	
-	if ($typeEqu # "")
-		$result := $status.query("equipments.type.label = :1"; $typeEqu).extract("status"; "label"; "equipments.length"; "value")
-	else 
-		$result := $status.extract("status"; "label"; "equipments.length"; "value")
-	end if 
+	If ($typeEqu#"")
+		$result:=$status.query("equipments.type.label = :1"; $typeEqu).extract("status"; "label"; "equipments.length"; "value")
+	Else 
+		$result:=$status.extract("status"; "label"; "equipments.length"; "value")
+	End if 
+	

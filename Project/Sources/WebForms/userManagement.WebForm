@@ -406,9 +406,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -424,7 +425,32 @@
 			},
 			"isCanvas": false,
 			"props": {
-				"events": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "User",
+						"events": [
+							"onchange"
+						],
+						"id": "nvkf1qUvZG2ghkkyTvmr9y",
+						"method": "ds.User.search",
+						"params": [
+							{
+								"name": "name",
+								"type": "Text",
+								"datasource": "searchByName",
+								"id": "uuwhRg7P6UCbsYgJRsx1wU"
+							}
+						],
+						"datasource": "",
+						"allowedOnHTTPGET": false,
+						"returns": {
+							"name": "result",
+							"type": "cs.UserSelection",
+							"datasource": "users"
+						}
+					}
+				],
 				"deletable": false,
 				"className": "fd-input w-full bg-transparent",
 				"type": "text",
@@ -440,7 +466,8 @@
 				"eyePosition": "right",
 				"intervals": [],
 				"datasource": "searchByName",
-				"dataType": "string"
+				"dataType": "string",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1154,9 +1181,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -1186,7 +1214,8 @@
 				"datasource": "user.email",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1419,9 +1448,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -1451,7 +1481,8 @@
 				"datasource": "user.jobTitle",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1621,9 +1652,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -1653,7 +1685,8 @@
 				"datasource": "user.department",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},

@@ -20,6 +20,9 @@ The application aims to:
 - Provide **incident tracking and resolution**  
 - Centralize IT administration in one structured platform  
 
+![Dashboard page](Project/Sources/Shared/assets/images/dash.png)
+
+
 Perfect for:
 
 - IT departments  
@@ -43,6 +46,8 @@ Your central command center.
 
 A simplified picture of IT health.
 
+![Dashboard page](Project/Sources/Shared/assets/images/dash.png)
+
 ---
 
 ### 🖥️ 2. Asset Management  
@@ -51,7 +56,10 @@ Track all your IT equipment in one place.
 - Full inventory of devices and hardware  
 - Equipment details (type, status, location, user, etc.)  
 - Asset health and availability monitoring  
-- Quick search and filtering tools  
+- Quick search and filtering tools 
+
+
+![Equipments page](Project/Sources/Shared/assets/images/equipments.png)
 
 ---
 
@@ -64,6 +72,8 @@ Stay compliant and avoid costly disruptions.
 - Compliance monitoring  
 - Detailed license records and usage information  
 
+![Software page](Project/Sources/Shared/assets/images/softwares.png)
+
 ---
 
 ### 🧯 4. Incident Management  
@@ -74,6 +84,8 @@ Integrated ticketing for smooth IT support.
 - Monitor progress and resolution status  
 - Keep your support workflow organized and traceable  
 
+![Incidents page](Project/Sources/Shared/assets/images/incidents.png)
+
 ---
 
 ### 📅 5. License Expiration Calendar  
@@ -83,6 +95,9 @@ Never miss a renewal again.
 - Color-coded status indicators  
 - Helps IT teams prepare renewals in advance  
 
+![Licenses page](Project/Sources/Shared/assets/images/licenses.png)
+
+
 ---
 
 ### 👥 6. User Management  
@@ -90,7 +105,10 @@ Access control made simple.
 
 - Add and manage users  
 - Assign roles and permissions  
-- Ensure the right people have the right access  
+- Ensure the right people have the right access 
+
+![Users page](Project/Sources/Shared/assets/images/users.png)
+
 
 ---
 
@@ -100,6 +118,8 @@ A structured interface for configuration management.
 - Manage application settings  
 - Add new configuration values  
 - Keep the system flexible and customizable  
+
+![Settings page](Project/Sources/Shared/assets/images/settings.png)
 
 ---
 
@@ -126,6 +146,10 @@ You can choose your preferred **starting page** depending on your workflow:
 - Set the starting page to **index** if you want to land directly on the login process.
 
 Explore the different pages to discover all the available features of the system.
+
+##### To enable all features in the Assertify application, credentials for mailing services must be configured in the application’s settings page.
+
+
 
 ### 3. Customize as Needed
 
