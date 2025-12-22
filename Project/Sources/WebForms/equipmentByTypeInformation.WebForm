@@ -9,6 +9,27 @@
 				"parentId": null,
 				"id": "kr228vFc59YgYCSFJWWjC"
 			}
+		],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "noUsers",
+				"id": "fTYXJYLjaGQF9Ckao5XLWC",
+				"conditions": {
+					"id": "nLuaPQwqLpAdCcm6xfTLN5",
+					"type": "datasource",
+					"name": "condition",
+					"value": "0",
+					"valueType": "hardCoded",
+					"path": "demo:equipment.users.length",
+					"dsType": "long",
+					"op": "eq",
+					"dataType": "number"
+				}
+			}
 		]
 	},
 	"components": {
@@ -382,9 +403,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -417,7 +439,8 @@
 				"datasource": "demo:equipment.comment",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -457,9 +480,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -491,7 +515,8 @@
 				"datasource": "demo:equipment.inventoryNumber",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -565,9 +590,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -599,7 +625,8 @@
 				"datasource": "demo:equipment.serialNumber",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -639,9 +666,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -673,7 +701,8 @@
 				"datasource": "demo:equipment.purchaseDate",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -713,9 +742,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -747,7 +777,8 @@
 				"datasource": "demo:equipment.finalWarrantyDate",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -1287,7 +1318,7 @@
 			"displayName": "Stylebox",
 			"custom": {
 				"contentWidth": 233,
-				"contentHeight": 45
+				"contentHeight": 46
 			},
 			"parent": "EBptzY8L0s",
 			"hidden": false,
@@ -2299,7 +2330,7 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {
-				"contentHeight": 37
+				"contentHeight": 38
 			},
 			"parent": "gBcd01OrIo",
 			"hidden": false,
@@ -2427,7 +2458,7 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {
-				"contentHeight": 37
+				"contentHeight": 38
 			},
 			"parent": "8pBG8xStHm",
 			"hidden": false,
@@ -2513,7 +2544,7 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {
-				"contentHeight": 37
+				"contentHeight": 38
 			},
 			"parent": "lWabfF9oXt",
 			"hidden": false,
@@ -3023,7 +3054,13 @@
 				"iterableChild": true
 			},
 			"displayName": "Stylebox",
-			"custom": {},
+			"custom": {
+				"states:fTYXJYLjaGQF9Ckao5XLWC": {
+					"style": {
+						"display": "none"
+					}
+				}
+			},
 			"parent": "X_MXB9bIb5",
 			"hidden": false,
 			"nodes": [

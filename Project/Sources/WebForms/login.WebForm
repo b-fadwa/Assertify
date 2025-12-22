@@ -19,12 +19,6 @@
 		],
 		"styles": [
 			{
-				"name": "sign-in",
-				"content": "self {\n  position: absolute;\n  width: 1727px;\n  height: 1119px;\n  top: 0;\n  left: 0;\n  background-blend-mode: overlay;\n  background: linear-gradient(135deg, rgba(235, 144, 206, 0.6) 0%, rgba(129, 53, 212, 0.2) 54.91%, rgba(72, 55, 188, 0) 100%);\n}",
-				"parentId": null,
-				"id": "chyCpB18gb-6WmyX4Vdkz"
-			},
-			{
 				"name": "lightMode",
 				"content": "self {\n  background-color : #ffffffff;\n  color : #666682;\n}",
 				"parentId": null,
@@ -211,7 +205,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Username or Email Address",
+								"text": "Email Address",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -223,7 +217,11 @@
 				"datasource": ""
 			},
 			"displayName": "Text",
-			"custom": {},
+			"custom": {
+				"__t": {
+					"doc": []
+				}
+			},
 			"parent": "NWz5g0LT_U",
 			"hidden": false,
 			"nodes": [],

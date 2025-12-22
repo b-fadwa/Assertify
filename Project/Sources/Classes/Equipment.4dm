@@ -1,24 +1,28 @@
 Class extends DataClass
-	
-exposed function $search($search : text; $equipmentType : text) : cs.EquipmentSelection
-	if ($search # "")
-		if ($equipmentType # "")
-			return this.query("type.label = :1 and status.status = :2"; $equipmentType; "@"+$search+"@")
-		else 
-			return this.query("type.label = :1 or status.status = :1"; "@"+$search+"@")
-		end if 
-	else 
-		if ($equipmentType # "")
-			return this.all().query("type.label = :1"; $equipmentType)
-		else 
-			return this.all()
-		end if 
-	end if 
-	
-	
-exposed function filterEquipmentByType($equipmentType : text) : cs.EquipmentSelection
-	return this.query("type.label = :1 "; $equipmentType)
-	
-exposed function filterEquipmentByTypeID($id : integer) : cs.EquipmentSelection
-	return this.query("type.ID = :1 "; $id)
 
+
+//filtering functions: 
+
+exposed Function search($search : Text; $equipmentType : Text) : cs:C1710.EquipmentSelection
+	If ($search#"")
+		If ($equipmentType#"")
+			return This:C1470.query("type.label = :1 and status.status = :2"; $equipmentType; "@"+$search+"@")
+		Else 
+			return This:C1470.query("type.label = :1 or status.status = :1"; "@"+$search+"@")
+		End if 
+	Else 
+		If ($equipmentType#"")
+			return This:C1470.all().query("type.label = :1"; $equipmentType)
+		Else 
+			return This:C1470.all()
+		End if 
+	End if 
+	
+	
+exposed Function filterEquipmentByType($equipmentType : Text) : cs:C1710.EquipmentSelection
+	return This:C1470.query("type.label = :1 "; $equipmentType)
+	
+exposed Function filterEquipmentByTypeID($id : Integer) : cs:C1710.EquipmentSelection
+	return This:C1470.query("type.ID = :1 "; $id)
+	
+	

@@ -1,52 +1,55 @@
 Class extends Entity
 
-exposed alias softwares equipmentSoftwares.software
+exposed Alias softwares equipmentSoftwares.software
 
-exposed function addEquipmentBrand($brand : cs.BrandEntity) : cs.EquipmentEntity
-	var $saved: object
-	this.brand := $brand
-	$saved := this.save()
-	if ($saved.success)
-		web Form.setMessage("Equipment added successfully")
-		web Form["AddEquToBrand"].hide()
-	else 
-		web Form.setError("An error occurred while linking the equipment to the selected brand")
-		end if 
-
-exposed function addEquipmentByType($equipmentType : text)
-	var $saved: object
-	var $chosenType: cs.TypeEntity
-
-	$chosenType := ds.Type.query("label = :1";$equipmentType).first()
-
-	this.type := $chosenType
-	$saved := this.save()
-
-	if($saved.success)
-		web Form.setMessage("Equipment added successfully")
-	else 
-		web Form.setError("An error occurred while creating the equipment")
-		end if
-
-exposed function assignIncidentToEqu($selectedEquipment : cs.EquipmentEntity; $selectedIncident : cs.IncidentHistoryEntity)
-    var $saved: object
-	var $component: 4D.WebFormItem
-
-	$component := web Form["AddIncident"]
-
-	if (($selectedIncident.equipment # null) ||($selectedIncident.equipment.ID = $selectedIncident.ID))
-		web Form.setError("This incident is already linked to an equipment.")
+// Links the equipment to the selected brand
+exposed Function addEquipmentBrand($brand : cs:C1710.BrandEntity) : cs:C1710.EquipmentEntity
+	var $saved : Object
+	This:C1470.brand:=$brand
+	$saved:=This:C1470.save()
+	If ($saved.success)
+		Web Form:C1735.setMessage("Equipment added successfully")
+		Web Form:C1735["AddEquToBrand"].hide()
+	Else 
+		Web Form:C1735.setError("An error occurred while linking the equipment to the selected brand")
+	End if 
+	
+	// Assigns a type to the equipment based on the selected label
+exposed Function addEquipmentByType($equipmentType : Text)
+	var $saved : Object
+	var $chosenType : cs:C1710.TypeEntity
+	
+	$chosenType:=ds:C1482.Type.query("label = :1"; $equipmentType).first()
+	
+	This:C1470.type:=$chosenType
+	$saved:=This:C1470.save()
+	
+	If ($saved.success)
+		Web Form:C1735.setMessage("Equipment added successfully")
+	Else 
+		Web Form:C1735.setError("An error occurred while creating the equipment")
+	End if 
+	
+	// Links an incident to the selected equipment
+exposed Function assignIncidentToEqu($selectedEquipment : cs:C1710.EquipmentEntity; $selectedIncident : cs:C1710.IncidentHistoryEntity)
+	var $saved : Object
+	var $component : 4D:C1709.WebFormItem
+	
+	$component:=Web Form:C1735["AddIncident"]
+	
+	If (($selectedIncident.equipment#Null:C1517) || ($selectedIncident.equipment.ID=$selectedIncident.ID))
+		Web Form:C1735.setError("This incident is already linked to an equipment.")
 		return 
-    end if
-
-    $selectedIncident.equipment := $selectedEquipment
-    $saved := $selectedIncident.save()
-
-    if ($saved.success)
-		web Form.setMessage("Incident successfully added to the equipment!")
+	End if 
+	
+	$selectedIncident.equipment:=$selectedEquipment
+	$saved:=$selectedIncident.save()
+	
+	If ($saved.success)
+		Web Form:C1735.setMessage("Incident successfully added to the equipment!")
 		$component.hide()
-
-    else 
-		web Form.setError("An error occurred while adding the incident.")
-		end if
+		
+	Else 
+		Web Form:C1735.setError("An error occurred while adding the incident.")
+	End if 
 	
