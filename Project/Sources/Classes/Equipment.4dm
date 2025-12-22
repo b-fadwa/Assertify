@@ -1,5 +1,8 @@
 Class extends DataClass
 
+
+//filtering functions: 
+
 exposed Function search($search : Text; $equipmentType : Text) : cs:C1710.EquipmentSelection
 	If ($search#"")
 		If ($equipmentType#"")

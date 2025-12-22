@@ -9,6 +9,27 @@
 				"parentId": null,
 				"id": "kr228vFc59YgYCSFJWWjC"
 			}
+		],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "noSoftware",
+				"id": "2VQd9vgJquMksDZimzBDpw",
+				"conditions": {
+					"id": "kYkLPYsCzaCAJi6Utu82mx",
+					"type": "datasource",
+					"name": "condition",
+					"value": "0",
+					"valueType": "hardCoded",
+					"path": "dataTable:Software.equipments.length",
+					"dsType": "long",
+					"op": "eq",
+					"dataType": "number"
+				}
+			}
 		]
 	},
 	"components": {
@@ -154,9 +175,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -186,7 +208,8 @@
 				"datasource": "dataTable:Software.name",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -250,9 +273,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -282,7 +306,8 @@
 				"datasource": "dataTable:Software.category",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -697,7 +722,7 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {
-				"contentHeight": 37
+				"contentHeight": 38
 			},
 			"parent": "4lMiVVkQTJ",
 			"hidden": false,
@@ -859,7 +884,13 @@
 				"iterableChild": true
 			},
 			"displayName": "Stylebox",
-			"custom": {},
+			"custom": {
+				"states:2VQd9vgJquMksDZimzBDpw": {
+					"style": {
+						"display": "none"
+					}
+				}
+			},
 			"parent": "tJITrt52ZN",
 			"hidden": false,
 			"nodes": [
@@ -1165,7 +1196,23 @@
 				"classNames": [
 					"Scroll"
 				],
-				"events": [],
+				"events": [
+					{
+						"type": "simple-action",
+						"id": "ucuk9AhxB3gd9iXxCK647F",
+						"events": [
+							"oninit"
+						],
+						"action": "all",
+						"actionType": "datasource",
+						"datasource": {
+							"name": "Equipements",
+							"type": "entitysel",
+							"from": "",
+							"namespace": "demo"
+						}
+					}
+				],
 				"overlay": true,
 				"serverSideRef": "AddEquipment",
 				"style": {
@@ -1216,7 +1263,13 @@
 				}
 			},
 			"displayName": "Matrix",
-			"custom": {},
+			"custom": {
+				"states:2VQd9vgJquMksDZimzBDpw": {
+					"style": {
+						"display": "block"
+					}
+				}
+			},
 			"parent": "T8PPRaZ_ct",
 			"hidden": false,
 			"nodes": [],
@@ -1883,7 +1936,7 @@
 			"displayName": "Stylebox",
 			"custom": {
 				"contentWidth": 233,
-				"contentHeight": 45
+				"contentHeight": 46
 			},
 			"parent": "Nl3DBQU8Ph",
 			"hidden": false,
@@ -3601,10 +3654,11 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Label",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"deletable": true,
-				"text": "Label"
+				"deletable": true
 			},
 			"displayName": "Label",
 			"custom": {},

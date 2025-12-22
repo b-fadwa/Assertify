@@ -292,13 +292,6 @@
 						}
 					}
 				]
-			},
-			{
-				"id": "numberOfAttachments",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "number",
-				"initialValue": "0"
 			}
 		],
 		"styles": [
@@ -307,12 +300,6 @@
 				"content": "self:has(span[title=\"Moderate\"]) {\n    background-color: #F3971E1A; \n    color: #F3971E;\n}\n\nself:has(span[title=\"Minor\"]) {\n    background-color: #11A3661A; \n    color: #11A366;\n}\n\nself:has(span[title=\"Critical\"]) {\n    background-color: #A16AFA1A; \n    color: #A16AFA;\n}",
 				"parentId": null,
 				"id": "GQXCMgD9W3g0NzBtr48nX"
-			},
-			{
-				"name": "incidentPicture",
-				"content": "self > .fd-image:not(:has(img)) {\n\tdisplay: none !important;\n}",
-				"parentId": null,
-				"id": "fIjRmQeSvGrQaAzxsK5mR"
 			}
 		],
 		"states": [
@@ -1059,9 +1046,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -1092,7 +1080,8 @@
 				"revealPassword": true,
 				"eyePosition": "right",
 				"intervals": [],
-				"classNames": []
+				"classNames": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -2365,9 +2354,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -2398,7 +2388,8 @@
 				"dataType": "string",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -3465,9 +3456,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -3498,7 +3490,8 @@
 				"dataType": "string",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -10639,9 +10632,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -10672,7 +10666,8 @@
 				"dataType": "date",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},

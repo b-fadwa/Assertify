@@ -19,8 +19,7 @@ Function getSetting($key : Text) : Text
 	var $setting : Object
 	$setting:=ds:C1482.Setting.query("key = :1"; $key).first()
 	If ($setting=Null:C1517)
-		// TODO: wrong 
-		// Web Form("Setting not found for key: "+$key)
+		Web Form:C1735("Setting not found for key: "+$key)
 	End if 
 	return $setting.value
 	

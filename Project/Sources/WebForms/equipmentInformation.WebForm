@@ -10,6 +10,27 @@
 				"id": "kr228vFc59YgYCSFJWWjC",
 				"scope": "local"
 			}
+		],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "noUsers",
+				"id": "uBYTwxk3focXNtoUmJsMXb",
+				"conditions": {
+					"id": "6aptDQJXHufdKSA6BenTq7",
+					"type": "datasource",
+					"name": "condition",
+					"value": "0",
+					"valueType": "hardCoded",
+					"path": "demo:equipment.users.length",
+					"dsType": "long",
+					"op": "eq",
+					"dataType": "number"
+				}
+			}
 		]
 	},
 	"components": {
@@ -3011,7 +3032,13 @@
 				"iterableChild": true
 			},
 			"displayName": "Stylebox",
-			"custom": {},
+			"custom": {
+				"states:uBYTwxk3focXNtoUmJsMXb": {
+					"style": {
+						"display": "none"
+					}
+				}
+			},
 			"parent": "X_MXB9bIb5",
 			"hidden": false,
 			"nodes": [

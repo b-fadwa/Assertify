@@ -62,12 +62,6 @@
 				"id": "YoE8NlkqHGo8nenIOoSjs"
 			},
 			{
-				"name": "dropDownChild",
-				"content": "self {\n\tdisplay: none;\n}",
-				"parentId": null,
-				"id": "CkbZXH_wOLNaU8aDIYI7s"
-			},
-			{
 				"name": "notificationCSS",
 				"content": "self {\n\tbackground-color: white;\n}\n\nself:has(p span[title=\"false\"]) {\n\tbackground-color: #e4eafd !important;\n\tfont-weight: 500 !important;\n\tcursor: pointer;\n}",
 				"parentId": null,

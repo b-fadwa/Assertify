@@ -8,48 +8,9 @@
 				"namespace": "",
 				"dataType": "string",
 				"initialValue": ""
-			},
-			{
-				"id": "Types",
-				"type": "entitysel",
-				"dataclass": "Type",
-				"initialValue": "all",
-				"depth": null,
-				"pageSize": 100,
-				"events": []
-			},
-			{
-				"id": "Fabricants",
-				"type": "entitysel",
-				"dataclass": "Brand",
-				"initialValue": "all",
-				"depth": null,
-				"pageSize": 100
 			}
 		],
-		"styles": [
-			{
-				"name": "studyMouseHoverMenu",
-				"content": "self {\n  background-color: #ffffff;\n  border: none;\n  color: #a5a8b3;\n  text-align: center;\n  font-size: 16px;\n  transition: 0.2s;\n\n}\n\nself:hover {\n\tbackground-color: #6fc295;\n  color: white;\n}",
-				"parentId": null,
-				"id": "saZaHG-4kq0zsC3fyiXyg",
-				"scope": "local"
-			},
-			{
-				"name": "commentInput",
-				"content": "self {\n  padding: 5px;\n  text-align: left; \n  word-wrap: break-word; \n  overflow-wrap: break-word; \n}",
-				"parentId": null,
-				"id": "LLb3VGEjG9jm8OqAA75X5",
-				"scope": "local"
-			},
-			{
-				"name": "customizedButton",
-				"content": "self {\nbackground-color: #2e55cb;\ncolor: white;\n}",
-				"parentId": null,
-				"scope": "local",
-				"id": "iPcAYaVbIp4CdqWafqHjL"
-			}
-		]
+		"styles": []
 	},
 	"components": {
 		"ROOT": {
@@ -124,10 +85,11 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "Label",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"deletable": true,
-				"text": "Label"
+				"deletable": true
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -150,7 +112,8 @@
 				"placeholder": "",
 				"readonly": false,
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -341,9 +304,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -376,7 +340,8 @@
 				"datasource": "demo:equipment.inventoryNumber",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -441,9 +406,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -476,7 +442,8 @@
 				"datasource": "demo:equipment.purchaseDate",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -514,9 +481,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -549,7 +517,8 @@
 				"datasource": "demo:equipment.serialNumber",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -587,9 +556,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -622,7 +592,8 @@
 				"datasource": "demo:equipment.finalWarrantyDate",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -2621,9 +2592,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -2656,7 +2628,8 @@
 				"datasource": "demo:Brand.brandName",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -2969,9 +2942,10 @@
 			},
 			"isCanvas": false,
 			"props": {
+				"text": "",
+				"classNames": [],
 				"events": [],
 				"moveable": false,
-				"text": "",
 				"deletable": true
 			},
 			"displayName": "Label",
@@ -3040,7 +3014,8 @@
 				"dataType": "string",
 				"revealPassword": true,
 				"eyePosition": "right",
-				"intervals": []
+				"intervals": [],
+				"twentyFourHours": true
 			},
 			"displayName": "Input",
 			"custom": {},

@@ -6,12 +6,13 @@ exposed Function saveIncident($importanceLevel : Text)
 	var $reporter : cs:C1710.UserEntity
 	var $mail : cs:C1710.Mail
 	var $currentUser : cs:C1710.UserEntity:=ds:C1482.getCurrentUser()
+	
 	$users:=ds:C1482.User.query("role = :1 "; "Admin")
 	
 	This:C1470.incidentDate:=Current date:C33()
 	This:C1470.importanceLevel:=$importanceLevel
 	This:C1470.resolutionStatus:="Reported"
-	This:C1470.reporter:=$currentUser
+	This:C1470.reporter:=ds:C1482.getCurrentUser()
 	If (This:C1470.incidentImage#Null:C1517)
 		This:C1470.bool:=1
 	Else 
@@ -39,6 +40,7 @@ exposed Function updateIncident($status : Text)
 	var $user : cs:C1710.UserEntity
 	var $users : cs:C1710.UserSelection
 	var $currentUser : cs:C1710.UserEntity:=ds:C1482.getCurrentUser()
+	
 	$users:=ds:C1482.User.query("role = :1 "; "Admin")
 	
 	This:C1470.resolutionStatus:=$status
