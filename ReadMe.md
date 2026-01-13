@@ -1,167 +1,82 @@
-# 🖥️ Assetify  
-### A Complete IT Asset, License & Incident Management System Built with Qodly
+# 🖥️ Assetify Application
 
-**Assetify** is an all-in-one IT operations platform that centralizes asset tracking, software licensing, incident handling, and team management.  
-Built entirely with the **Qodly** low-code environment, it is designed for clarity, efficiency, and real-world IT workflows.
+This demo app is built with **4D Qodly Pro** and is meant to inspire you or help you kickstart your own IT asset management project.
 
-From inventory control to license expiration tracking, Assetify provides everything needed to keep IT operations smooth and reliable.
+## Purpose of the application
 
----
+The **Assetify Application** centralizes IT operations into a single, intuitive system.  
+It helps teams manage IT assets, software licenses, incidents, and users while ensuring clear role-based access for staff.
 
-# 🎯 Purpose of the Application
+## Main Features
 
-Managing IT assets often means juggling multiple tools: spreadsheets, ticketing systems, license trackers, and asset lists.  
-**Assetify** brings all of these into a single, unified system.
-
-The application aims to:
-
-- Provide **full visibility** into equipment, software, licenses, and incidents  
-- Simplify **inventory and license compliance**  
-- Provide **incident tracking and resolution**  
-- Centralize IT administration in one structured platform  
+- **Dashboard**: Global overview of assets, licenses, incidents, and upcoming expirations.  
 
 ![Dashboard page](Project/Sources/Shared/assets/images/dash.png)
-
-
-Perfect for:
-
-- IT departments  
-- Technical support teams    
-
----
-
-# 🧩 What the App Covers
-
-Assetify is organized into several core modules that support IT operations from end to end.
-
----
-
-### 📊 1. Dashboard  
-Your central command center.
-
-- Overview of asset counts  
-- Open incidents at a glance  
-- Upcoming license expirations  
-- Highlights of critical events and tasks  
-
-A simplified picture of IT health.
-
-![Dashboard page](Project/Sources/Shared/assets/images/dash.png)
-
----
-
-### 🖥️ 2. Asset Management  
-Track all your IT equipment in one place.
-
-- Full inventory of devices and hardware  
-- Equipment details (type, status, location, user, etc.)  
-- Asset health and availability monitoring  
-- Quick search and filtering tools 
-
+- **Asset Management**: Track all IT equipment with details such as type, status, location, and assigned user.  
 
 ![Equipments page](Project/Sources/Shared/assets/images/equipments.png)
-
----
-
-### 💽 3. Software & License Management  
-Stay compliant and avoid costly disruptions.
-
-- List of installed software  
-- License status tracking  
-- Renewal dates and expiration alerts  
-- Compliance monitoring  
-- Detailed license records and usage information  
+- **Software & License Management**: Monitor software installations, license validity, and compliance. 
 
 ![Software page](Project/Sources/Shared/assets/images/softwares.png)
-
----
-
-### 🧯 4. Incident Management  
-Integrated ticketing for smooth IT support.
-
-- Track open incidents and issue history  
-- Assign tasks to technicians  
-- Monitor progress and resolution status  
-- Keep your support workflow organized and traceable  
+- **Incident Management**: Create, assign, and resolve IT incidents with tracking and notifications.  
 
 ![Incidents page](Project/Sources/Shared/assets/images/incidents.png)
-
----
-
-### 📅 5. License Expiration Calendar  
-Never miss a renewal again.
-
-- Visual calendar of upcoming expirations  
-- Color-coded status indicators  
-- Helps IT teams prepare renewals in advance  
+- **License Expiration Calendar**: Visual overview of upcoming renewals and expirations. 
 
 ![Licenses page](Project/Sources/Shared/assets/images/licenses.png)
-
-
----
-
-### 👥 6. User Management  
-Access control made simple.
-
-- Add and manage users  
-- Assign roles and permissions  
-- Ensure the right people have the right access 
+- **User Management**: Manage users, roles, and access permissions.
 
 ![Users page](Project/Sources/Shared/assets/images/users.png)
-
-
----
-
-### ⚙️ 7. Settings  
-A structured interface for configuration management.
-
-- Manage application settings  
-- Add new configuration values  
-- Keep the system flexible and customizable  
+- **Settings**: Configure system-wide settings and preferences.
 
 ![Settings page](Project/Sources/Shared/assets/images/settings.png)
 
----
 
-# 🚀 How to Integrate and Use the Application
+## How to Run
 
-Follow these steps to get **Assetify** running in your Qodly project.
+### Pre-requisites (4D Software)
+- Download the latest Release version of 4D: [Product Download](https://us.4d.com/product-download/Feature-Release)  
+- Or the latest Beta version: [Beta Program](https://discuss.4d.com/)  
+- Follow activation steps: [Installation Guide](https://developer.4d.com/docs/GettingStarted/installation)
 
----
+### Steps to Run the Project
+- Clone or download this repository to your local machine.  
+- Open the project in 4D: **File > Open Project**  
+- Open **Qodly Studio**: **Design > Qodly Studio**  
+- Click **Run** to start the server and preview the app in your browser.
 
-### 1. Clone or Import the Template
+## Configuration & Credentials
 
-Download or clone the Assetify project into your **Qodly workspace** or 4D project folder.  
-Open the project inside **Qodly Studio**.
+### Do I need to create external accounts?
+- **Mailing (optional)**: Required only if you want email notifications (incident updates, alerts).  
+  Assetify supports sending emails via **SMTP-compatible services** such as **SendGrid SMTP** (see class **Mail**).
 
----
-
-### 2. Launch the Application
-
-To access and start using the application, open the project in **Qodly Studio** and run the application.
-
-You can choose your preferred **starting page** depending on your workflow:
-
-- Set the starting page to **Home** if you want an overview of the entire application and its features.  
-- Set the starting page to **index** if you want to land directly on the login process.
-
-Explore the different pages to discover all the available features of the system.
-
-##### To enable all features in the Assertify application, credentials for mailing services must be configured in the application’s settings page.
+### Where does the app read credentials?
+- Credentials are inputted in the Settings page in the application.
 
 
+## Test Accounts and Sample Data  
+- Sample data can be generated via a dedicated data generator method or from the UI.
 
-### 3. Customize as Needed
+## Where to Find the Code for Each Feature
 
-Assetify is designed to be extensible.  
-You can enhance or adapt:
+- **Generating data**
+  - Server: `InitData.4dm` — Generated random data for the application's dataclasses.
+  - UI: `home.WebForm`
 
-- The **data model**  
-- UI pages in **QodlyPages**  
-- Business logic in project methods  
-- Workflow automation (incident escalation, alerts)  
-- License validation rules  
-- Asset categories and metadata  
+- **Authentication & Roles**
+  - Server: `DataStore.4dm` (authentication & session privileges) — Handles user authentication, sessions, and role-based access across the application.
+  - UI: `login.WebForm` / `index.WebForm`
 
-Use the platform as a foundation for your own IT management systems.
+- **Custom UI components** used to enhance user experience, including:
+  - Calendar (in the calendar page)
 
+  - Charts (in the dashboard page)
+
+  - Popover (in the startPage and other pages)
+
+  - Tree (in the startPage page)
+
+  - Accordion and DatePicker (in the dashboard page and other pages)
+
+This structure allows you to easily customize, extend, or reuse the Assetify application as a foundation for your own IT operations solutions.

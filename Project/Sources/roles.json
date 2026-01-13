@@ -33,9 +33,13 @@
 					"administrator"
 				],
 				"drop": [
-					"guestPromoted"
+					"guestPromoted",
+					"administrator"
 				],
 				"update": [
+					"administrator"
+				],
+				"execute": [
 					"administrator"
 				]
 			},

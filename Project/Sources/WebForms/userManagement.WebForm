@@ -591,7 +591,8 @@
 					"backgroundImage": "url(/$shared/assets/images/placeholder.jpeg)"
 				},
 				"datasource": "$This.picture",
-				"defaultImgSrc": "/$shared/assets/images/emptyPic.png"
+				"defaultImgSrc": "/$shared/assets/images/emptyPic.png",
+				"imgSrc": ""
 			},
 			"displayName": "Image",
 			"custom": {},
@@ -809,7 +810,7 @@
 				},
 				"datasource": "user.picture",
 				"defaultImgSrc": "/$shared/assets/images/emptyPic.png",
-				"imgSrc": "/$shared/assets/images/emptyPic.png"
+				"imgSrc": ""
 			},
 			"displayName": "Image",
 			"custom": {},
@@ -842,7 +843,9 @@
 					"marginTop": "0px",
 					"cursor": "pointer"
 				},
-				"datasource": "user.picture"
+				"datasource": "user.picture",
+				"fileSizeLimit": "",
+				"fileType": "image/*"
 			},
 			"displayName": "File Upload",
 			"custom": {},
@@ -1833,25 +1836,21 @@
 				"events": [
 					{
 						"type": "simple-action",
-						"id": "5U7X1KMAFkRhpGxXboXH9o",
+						"id": "sfTLN9V8DcoFXcaU4MHWmo",
 						"events": [
 							"onclick"
 						],
 						"action": "save",
+						"actionType": "datasource",
 						"datasource": {
 							"name": "user",
+							"type": "entity",
 							"from": "users",
-							"namespace": "",
-							"type": "entity"
+							"namespace": ""
 						},
 						"feedback": {
-							"enabled": true,
-							"messages": {
-								"onSuccess": "",
-								"onFail": ""
-							}
-						},
-						"actionType": "datasource"
+							"enabled": true
+						}
 					}
 				],
 				"style": {
