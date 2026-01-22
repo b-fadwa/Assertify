@@ -57,6 +57,9 @@ It helps teams manage IT assets, software licenses, incidents, and users while e
 
 ## Test Accounts and Sample Data  
 - Sample data can be generated via a dedicated data generator method or from the UI.
+- To test the login, you can use the following credentials:
+  - **Email:** emmarossi@4D.com  
+  - **Password:** password
 
 ## Where to Find the Code for Each Feature
 
